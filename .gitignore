@@ -1,0 +1,8 @@
+.build/
+build/
+.DS_Store
+.swiftpm/
+__pycache__/
+stress_relief.exe
+re/decomp/
+desktop-games-demo.mov

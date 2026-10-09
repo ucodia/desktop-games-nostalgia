@@ -1,0 +1,1316 @@
+### GLOBALS
+basic variables and functions@G0: group
+    Desktop Games@G1: function [LOCAL#0]
+    sheet@G2: map [MAP#0]
+    empty square@G3: picture [PICTURE#0]
+    Peter@G4: sprite [SPRITE#0]
+    Lucy@G5: sprite [SPRITE#1]
+introduction@G6: group
+    introduction picture@G7: background [BACKGRND#0]
+    introduction picture (English)@G8: background [BACKGRND#1]
+desktop@G9: group
+    picture to storage Desktop@G10: background [BACKGRND#2]
+    picture to storage Desktop (original)@G11: background [BACKGRND#3]
+    initialization of Desktop mode@G12: function [LOCAL#19]
+selection@G13: group
+    picture of tool selection@G14: background [BACKGRND#4]
+    picture of tool selection (English)@G15: background [BACKGRND#5]
+    sprite of selection cursor@G16: sprite [SPRITE#2]
+        cursor horizontal@G17: sprite_x = 0.0
+        cursor vertical@G18: sprite_y = 0.0
+        cursor direction@G19: sprite_dir = 0.0
+        cursor visible@G20: sprite_vis = False
+        cursor moving@G21: sprite_move = False
+        cursor phase@G22: sprite_phase = 0.0
+        cursor state@G23: sprite_status = 0.0
+    selected function (-1=end)@G24: real = 0.0
+    last selected function@G25: real = 0.0
+    make selection of function@G26: function [LOCAL#12]
+control@G27: group
+    there is not interrupt of active tool@G28: logic = False
+    storage of button state@G29: logic = False
+    sprite of tool@G30: sprite [SPRITE#3]
+        tool horizontal@G31: sprite_x = 0.0
+        tool vertical@G32: sprite_y = 0.0
+        tool direction@G33: sprite_dir = 0.0
+        tool visible@G34: sprite_vis = False
+        tool moving@G35: sprite_move = False
+        tool phase@G36: sprite_phase = 0.0
+        tool state@G37: sprite_status = 0.0
+    sound stereobase@G38: real = 0.0
+    calculation of sound stereobase@G39: function [LOCAL#28]
+    service of selection by keyboard@G40: function [LOCAL#101]
+bullets@G41: group
+    writting index of bullets@G42: real = 0.0
+    service of bullets flight@G43: function [LOCAL#31]
+    creation of bullet@G44: function [LOCAL#41]
+    creation of hit@G45: function [LOCAL#53]
+    death of termites@G46: function [LOCAL#162]
+    list of bullets@G47: list
+        200 - max. number of bullets@G48: list_size
+        index of bullet@G49: list_index = 0.0
+        index increment of bullet@G50: list_auto = 0.0
+        bullet type (1=hit, 2=shell, 3=potsherd or splinter, 4=flying flame, 5=standing flame, 6=color, 7=termite)@G51: real = 0.0
+        X speed@G52: real = 0.0
+        Y speed@G53: real = 0.0
+        bullet@G54: sprite [SPRITE#4]
+            bullet horizontal@G55: sprite_x = 0.0
+            bullet vertical@G56: sprite_y = 0.0
+            bullet direction@G57: sprite_dir = 0.0
+            bullet visible@G58: sprite_vis = False
+            bullet moving@G59: sprite_move = False
+            bullet phase@G60: sprite_phase = 0.0
+            bullet state@G61: sprite_status = 0.0
+0: hammer@G62: group
+    hammer service@G63: function [LOCAL#81]
+    determine color brightness by offset@G64: function [LOCAL#89]
+    create potsherd@G65: function [LOCAL#96]
+    sprite of quiet hammer@G66: sprite [SPRITE#5]
+        quiet hammer horizontal@G67: sprite_x = 0.0
+        quiet hammer vertical@G68: sprite_y = 0.0
+        quiet hammer direction@G69: sprite_dir = 0.0
+        quiet hammer visible@G70: sprite_vis = False
+        quiet hammer moving@G71: sprite_move = False
+        quiet hammer phase@G72: sprite_phase = 0.0
+        quiet hammer state@G73: sprite_status = 0.0
+    sprite of knock hammer@G74: sprite [SPRITE#6]
+        knock hammer horizontal@G75: sprite_x = 0.0
+        knock hammer vertical@G76: sprite_y = 0.0
+        knock hammer direction@G77: sprite_dir = 0.0
+        knock hammer visible@G78: sprite_vis = False
+        knock hammer moving@G79: sprite_move = False
+        knock hammer phase@G80: sprite_phase = 0.0
+        knock hammer state@G81: sprite_status = 0.0
+    sprites of potsherds@G82: group
+        sprite of potsherd 1@G83: sprite [SPRITE#7]
+            sprite of potsherd 1 horizontal@G84: sprite_x = 0.0
+            sprite of potsherd 1 vertical@G85: sprite_y = 0.0
+            sprite of potsherd 1 direction@G86: sprite_dir = 0.0
+            sprite of potsherd 1 visible@G87: sprite_vis = False
+            sprite of potsherd 1 moving@G88: sprite_move = False
+            sprite of potsherd 1 phase@G89: sprite_phase = 0.0
+            sprite of potsherd 1 state@G90: sprite_status = 0.0
+        sprite of potsherd 2@G91: sprite [SPRITE#8]
+            sprite of potsherd 2 horizontal@G92: sprite_x = 0.0
+            sprite of potsherd 2 vertical@G93: sprite_y = 0.0
+            sprite of potsherd 2 direction@G94: sprite_dir = 0.0
+            sprite of potsherd 2 visible@G95: sprite_vis = False
+            sprite of potsherd 2 moving@G96: sprite_move = False
+            sprite of potsherd 2 phase@G97: sprite_phase = 0.0
+            sprite of potsherd 2 state@G98: sprite_status = 0.0
+        sprite of potsherd 3@G99: sprite [SPRITE#9]
+            sprite of potsherd 3 horizontal@G100: sprite_x = 0.0
+            sprite of potsherd 3 vertical@G101: sprite_y = 0.0
+            sprite of potsherd 3 direction@G102: sprite_dir = 0.0
+            sprite of potsherd 3 visible@G103: sprite_vis = False
+            sprite of potsherd 3 moving@G104: sprite_move = False
+            sprite of potsherd 3 phase@G105: sprite_phase = 0.0
+            sprite of potsherd 3 state@G106: sprite_status = 0.0
+        sprite of potsherd 4@G107: sprite [SPRITE#10]
+            sprite of potsherd 4 horizontal@G108: sprite_x = 0.0
+            sprite of potsherd 4 vertical@G109: sprite_y = 0.0
+            sprite of potsherd 4 direction@G110: sprite_dir = 0.0
+            sprite of potsherd 4 visible@G111: sprite_vis = False
+            sprite of potsherd 4 moving@G112: sprite_move = False
+            sprite of potsherd 4 phase@G113: sprite_phase = 0.0
+            sprite of potsherd 4 state@G114: sprite_status = 0.0
+        sprite of potsherd 5@G115: sprite [SPRITE#11]
+            sprite of potsherd 5 horizontal@G116: sprite_x = 0.0
+            sprite of potsherd 5 vertical@G117: sprite_y = 0.0
+            sprite of potsherd 5 direction@G118: sprite_dir = 0.0
+            sprite of potsherd 5 visible@G119: sprite_vis = False
+            sprite of potsherd 5 moving@G120: sprite_move = False
+            sprite of potsherd 5 phase@G121: sprite_phase = 0.0
+            sprite of potsherd 5 state@G122: sprite_status = 0.0
+    pictures of hammer hit@G123: group
+        picture of hammer hit 1@G124: background [BACKGRND#6]
+        picture of hammer hit 2@G125: background [BACKGRND#7]
+        picture of hammer hit 3@G126: background [BACKGRND#8]
+        picture of hammer hit 4@G127: background [BACKGRND#9]
+        picture of hammer hit 5@G128: background [BACKGRND#10]
+        picture of hammer hit 6@G129: background [BACKGRND#11]
+        picture of hammer hit 7@G130: background [BACKGRND#12]
+        picture of hammer hit 8@G131: background [BACKGRND#13]
+    sounds of smash@G132: group
+        Smash 1@G133: sound [SOUND#0]
+        Smash 2@G134: sound [SOUND#1]
+        Smash 3@G135: sound [SOUND#2]
+        Smash 4@G136: sound [SOUND#3]
+        Smash 5@G137: sound [SOUND#4]
+        Smash 6@G138: sound [SOUND#5]
+        Smash 7@G139: sound [SOUND#6]
+        Smash 8@G140: sound [SOUND#7]
+1: chain-saw@G141: group
+    chain-saw service@G142: function [LOCAL#104]
+    create splinter@G143: function [LOCAL#111]
+    sprite of quiet chain-saw@G144: sprite [SPRITE#12]
+        quiet chain-saw horizontal@G145: sprite_x = 0.0
+        quiet chain-saw vertical@G146: sprite_y = 0.0
+        quiet chain-saw direction@G147: sprite_dir = 0.0
+        quiet chain-saw visible@G148: sprite_vis = False
+        quiet chain-saw moving@G149: sprite_move = False
+        quiet chain-saw phase@G150: sprite_phase = 0.0
+        quiet chain-saw state@G151: sprite_status = 0.0
+    sprite of sawing chain-saw@G152: sprite [SPRITE#13]
+        sawing chain-saw horizontal@G153: sprite_x = 0.0
+        sawing chain-saw vertikal@G154: sprite_y = 0.0
+        sawing chain-saw direction@G155: sprite_dir = 0.0
+        sawing chain-saw visible@G156: sprite_vis = False
+        sawing chain-saw moving@G157: sprite_move = False
+        sawing chain-saw phase@G158: sprite_phase = 0.0
+        sawing chain-saw state@G159: sprite_status = 0.0
+    sprites of splinters@G160: group
+        sprite of splinter 1@G161: sprite [SPRITE#14]
+            sprite of splinter 1 horizontal@G162: sprite_x = 0.0
+            sprite of splinter 1 vertical@G163: sprite_y = 0.0
+            sprite of splinter 1 direction@G164: sprite_dir = 0.0
+            sprite of splinter 1 visible@G165: sprite_vis = False
+            sprite of splinter 1 moving@G166: sprite_move = False
+            sprite of splinter 1 phase@G167: sprite_phase = 0.0
+            sprite of splinter 1 state@G168: sprite_status = 0.0
+        sprite of splinter 2@G169: sprite [SPRITE#15]
+            sprite of splinter 2 horizontal@G170: sprite_x = 0.0
+            sprite of splinter 2 vertical@G171: sprite_y = 0.0
+            sprite of splinter 2 direction@G172: sprite_dir = 0.0
+            sprite of splinter 2 visible@G173: sprite_vis = False
+            sprite of splinter 2 moving@G174: sprite_move = False
+            sprite of splinter 2 phase@G175: sprite_phase = 0.0
+            sprite of splinter 2 state@G176: sprite_status = 0.0
+        sprite of splinter 3@G177: sprite [SPRITE#16]
+            sprite of splinter 3 horizontal@G178: sprite_x = 0.0
+            sprite of splinter 3 vertical@G179: sprite_y = 0.0
+            sprite of splinter 3 direction@G180: sprite_dir = 0.0
+            sprite of splinter 3 visible@G181: sprite_vis = False
+            sprite of splinter 3 moving@G182: sprite_move = False
+            sprite of splinter 3 phase@G183: sprite_phase = 0.0
+            sprite of splinter 3 state@G184: sprite_status = 0.0
+        sprite of splinter 4@G185: sprite [SPRITE#17]
+            sprite of splinter 4 horizontal@G186: sprite_x = 0.0
+            sprite of splinter 4 vertical@G187: sprite_y = 0.0
+            sprite of splinter 4 direction@G188: sprite_dir = 0.0
+            sprite of splinter 4 visible@G189: sprite_vis = False
+            sprite of splinter 4 moving@G190: sprite_move = False
+            sprite of splinter 4 phase@G191: sprite_phase = 0.0
+            sprite of splinter 4 state@G192: sprite_status = 0.0
+        sprite of splinter 5@G193: sprite [SPRITE#18]
+            sprite of splinter 5 horizontal@G194: sprite_x = 0.0
+            sprite of splinter 5 vertical@G195: sprite_y = 0.0
+            sprite of splinter 5 direction@G196: sprite_dir = 0.0
+            sprite of splinter 5 visible@G197: sprite_vis = False
+            sprite of splinter 5 moving@G198: sprite_move = False
+            sprite of splinter 5 phase@G199: sprite_phase = 0.0
+            sprite of splinter 5 state@G200: sprite_status = 0.0
+    sounds of sawing@G201: group
+        Quiet chain-saw@G202: sound [SOUND#8]
+        Sawing chain-saw@G203: sound [SOUND#9]
+2: machine gun@G204: group
+    service of machine gun@G205: function [LOCAL#24]
+    create shell@G206: function [LOCAL#68]
+    machine gun@G207: sound [SOUND#10]
+    machine gun reverberation@G208: sound [SOUND#11]
+    sprite of quiet machine gun@G209: sprite [SPRITE#19]
+        quiet machine gun horizontal@G210: sprite_x = 0.0
+        quiet machine gun vertical@G211: sprite_y = 0.0
+        quiet machine gun direction@G212: sprite_dir = 0.0
+        quiet machine gun visible@G213: sprite_vis = False
+        quiet machine gun moving@G214: sprite_move = False
+        quiet machine gun phase@G215: sprite_phase = 0.0
+        quiet machine gun state@G216: sprite_status = 0.0
+    sprite of shooting machine gun@G217: sprite [SPRITE#20]
+        shooting machine gun horizontal@G218: sprite_x = 0.0
+        shooting machine gun vertical@G219: sprite_y = 0.0
+        shooting machine gun direction@G220: sprite_dir = 0.0
+        shooting machine gun visible@G221: sprite_vis = False
+        shooting machine gun moving@G222: sprite_move = False
+        shooting machine gun phase@G223: sprite_phase = 0.0
+        shooting machine gun state@G224: sprite_status = 0.0
+    sprite of hit by machine gun@G225: sprite [SPRITE#21]
+        sprite of hit by machine gun horizontal@G226: sprite_x = 0.0
+        sprite of hit by machine gun vertical@G227: sprite_y = 0.0
+        sprite of hit by machine gun direction@G228: sprite_dir = 0.0
+        sprite of hit by machine gun visible@G229: sprite_vis = False
+        sprite of hit by machine gun moving@G230: sprite_move = False
+        sprite of hit by machine gun phase@G231: sprite_phase = 0.0
+        sprite of hit by machine gun state@G232: sprite_status = 0.0
+    sprite of shell from machine gun@G233: sprite [SPRITE#22]
+        sprite of shell from machine gun horizontal@G234: sprite_x = 0.0
+        sprite of shell from machine gun vertical@G235: sprite_y = 0.0
+        sprite of shell from machine gun direction@G236: sprite_dir = 0.0
+        sprite of shell from machine gun visible@G237: sprite_vis = False
+        sprite of shell from machine gun moving@G238: sprite_move = False
+        sprite of shell from machine gun phase@G239: sprite_phase = 0.0
+        sprite of shell from machine gun state@G240: sprite_status = 0.0
+    pictures of hit by machine gun@G241: group
+        picture of hit by machine gun 0@G242: background [BACKGRND#14]
+        picture of hit by machine gun 1@G243: background [BACKGRND#15]
+        picture of hit by machine gun 2@G244: background [BACKGRND#16]
+        picture of hit by machine gun 3@G245: background [BACKGRND#17]
+    sounds of shell drops@G246: group
+        Drop of shell 1@G247: sound [SOUND#12]
+        Drop of shell 2@G248: sound [SOUND#13]
+        Drop of shell 3@G249: sound [SOUND#14]
+        Drop of shell 4@G250: sound [SOUND#15]
+        Drop of shell 5@G251: sound [SOUND#16]
+        Drop of shell 6@G252: sound [SOUND#17]
+        Drop of shell 7@G253: sound [SOUND#18]
+        Drop of shell 8@G254: sound [SOUND#19]
+        Drop of shell 9@G255: sound [SOUND#20]
+3: flame-thrower@G256: group
+    service of flame-thrower@G257: function [LOCAL#118]
+    create flame@G258: function [LOCAL#122]
+    sprite of flame-thrower@G259: sprite [SPRITE#23]
+        flame-thrower horizontal@G260: sprite_x = 0.0
+        flame-thrower vertical@G261: sprite_y = 0.0
+        flame-thrower direction@G262: sprite_dir = 0.0
+        flame-thrower visible@G263: sprite_vis = False
+        flame-thrower moving@G264: sprite_move = False
+        flame-thrower phase@G265: sprite_phase = 0.0
+        flame-thrower state@G266: sprite_status = 0.0
+    sprite of flame@G267: sprite [SPRITE#24]
+        sprite of flame horizontal@G268: sprite_x = 0.0
+        sprite of flame vertical@G269: sprite_y = 0.0
+        sprite of flame direction@G270: sprite_dir = 0.0
+        sprite of flame visible@G271: sprite_vis = False
+        sprite of flame moving@G272: sprite_move = False
+        sprite of flame phase@G273: sprite_phase = 0.0
+        sprite of flame state@G274: sprite_status = 0.0
+    sprite of standing flame@G275: sprite [SPRITE#25]
+        sprite of standing flame horizontal@G276: sprite_x = 0.0
+        sprite of standing flame vertical@G277: sprite_y = 0.0
+        sprite of standing flame direction@G278: sprite_dir = 0.0
+        sprite of standing flame visible@G279: sprite_vis = False
+        sprite of standing flame moving@G280: sprite_move = False
+        sprite of standing flame phase@G281: sprite_phase = 0.0
+        sprite of standing flame state@G282: sprite_status = 0.0
+    sounds of flame-thrower@G283: group
+        Fire@G284: sound [SOUND#21]
+        Flame begin@G285: sound [SOUND#22]
+        Flame@G286: sound [SOUND#23]
+        Flame end@G287: sound [SOUND#24]
+    pictures of flame-thrower hit@G288: group
+        picture of flame-thrower hit 1@G289: background [BACKGRND#18]
+        picture of flame-thrower hit 2@G290: background [BACKGRND#19]
+        picture of flame-thrower hit 3@G291: background [BACKGRND#20]
+        picture of flame-thrower hit 4@G292: background [BACKGRND#21]
+4: color-thrower@G293: group
+    service of color-thrower@G294: function [LOCAL#127]
+    create color@G295: function [LOCAL#132]
+    sprite of color-thrower@G296: sprite [SPRITE#26]
+        color-thrower horizontal@G297: sprite_x = 0.0
+        color-thrower vertical@G298: sprite_y = 0.0
+        color-thrower direction@G299: sprite_dir = 0.0
+        color-thrower visible@G300: sprite_vis = False
+        color-thrower moving@G301: sprite_move = False
+        color-thrower phase@G302: sprite_phase = 0.0
+        color-thrower state@G303: sprite_status = 0.0
+    sprites of colors@G304: group
+        sprite of color - red@G305: sprite [SPRITE#27]
+            red color horizontal@G306: sprite_x = 0.0
+            red color vertical@G307: sprite_y = 0.0
+            red color direction@G308: sprite_dir = 0.0
+            red color visible@G309: sprite_vis = False
+            red color moving@G310: sprite_move = False
+            red color phase@G311: sprite_phase = 0.0
+            red color state@G312: sprite_status = 0.0
+        sprite of color - green@G313: sprite [SPRITE#28]
+            green color horizontal@G314: sprite_x = 0.0
+            green color vertical@G315: sprite_y = 0.0
+            green color direction@G316: sprite_dir = 0.0
+            green color visible@G317: sprite_vis = False
+            green color moving@G318: sprite_move = False
+            green color phase@G319: sprite_phase = 0.0
+            green color state@G320: sprite_status = 0.0
+        sprite of color - blue@G321: sprite [SPRITE#29]
+            blue color horizontal@G322: sprite_x = 0.0
+            blue color vertical@G323: sprite_y = 0.0
+            blue color direction@G324: sprite_dir = 0.0
+            blue color visible@G325: sprite_vis = False
+            blue color moving@G326: sprite_move = False
+            blue color phase@G327: sprite_phase = 0.0
+            blue color state@G328: sprite_status = 0.0
+        sprite of color - yellow@G329: sprite [SPRITE#30]
+            yellow color horizontal@G330: sprite_x = 0.0
+            yellow color vertical@G331: sprite_y = 0.0
+            yellow color direction@G332: sprite_dir = 0.0
+            yellow color visible@G333: sprite_vis = False
+            yellow color moving@G334: sprite_move = False
+            yellow color phase@G335: sprite_phase = 0.0
+            yellow color state@G336: sprite_status = 0.0
+        sprite of color - purple@G337: sprite [SPRITE#31]
+            purple color horizontal@G338: sprite_x = 0.0
+            purple color vertical@G339: sprite_y = 0.0
+            purple color direction@G340: sprite_dir = 0.0
+            purple color visible@G341: sprite_vis = False
+            purple color moving@G342: sprite_move = False
+            purple color phase@G343: sprite_phase = 0.0
+            purple color state@G344: sprite_status = 0.0
+        sprite of color - cyan@G345: sprite [SPRITE#32]
+            cyan color horizontal@G346: sprite_x = 0.0
+            cyan color vertical@G347: sprite_y = 0.0
+            cyan color direction@G348: sprite_dir = 0.0
+            cyan color visible@G349: sprite_vis = False
+            cyan color moving@G350: sprite_move = False
+            cyan color phase@G351: sprite_phase = 0.0
+            cyan color state@G352: sprite_status = 0.0
+        sprite of color - orange@G353: sprite [SPRITE#33]
+            orange color horizontal@G354: sprite_x = 0.0
+            orange color vertical@G355: sprite_y = 0.0
+            orange color direction@G356: sprite_dir = 0.0
+            orange color visible@G357: sprite_vis = False
+            orange color moving@G358: sprite_move = False
+            orange color phase@G359: sprite_phase = 0.0
+            orange color state@G360: sprite_status = 0.0
+        sprite of color - pink@G361: sprite [SPRITE#34]
+            pink color horizontal@G362: sprite_x = 0.0
+            pink color vertical@G363: sprite_y = 0.0
+            pink color direction@G364: sprite_dir = 0.0
+            pink color visible@G365: sprite_vis = False
+            pink color moving@G366: sprite_move = False
+            pink color phase@G367: sprite_phase = 0.0
+            pink color state@G368: sprite_status = 0.0
+    sounds of color-thrower@G369: group
+        Color-thrower shooting@G370: sound [SOUND#25]
+        Color-thrower drop@G371: sound [SOUND#26]
+    pictures of hit by color-thrower@G372: group
+        picture of hit by color-thrower 1@G373: background [BACKGRND#22]
+        picture of hit by color-thrower 2@G374: background [BACKGRND#23]
+        picture of hit by color-thrower 3@G375: background [BACKGRND#24]
+        picture of hit by color-thrower 4@G376: background [BACKGRND#25]
+        picture of hit by color-thrower 5@G377: background [BACKGRND#26]
+5: phaser@G378: group
+    phaser service@G379: function [LOCAL#145]
+    sprite of phaser@G380: sprite [SPRITE#35]
+        phaser horizontal@G381: sprite_x = 0.0
+        phaser vertical@G382: sprite_y = 0.0
+        phaser direction@G383: sprite_dir = 0.0
+        phaser visible@G384: sprite_vis = False
+        phaser moving@G385: sprite_move = False
+        phaser phase@G386: sprite_phase = 0.0
+        phaser state@G387: sprite_status = 0.0
+    sprite of shooting phaser@G388: sprite [SPRITE#36]
+        shooting phaser horizontal@G389: sprite_x = 0.0
+        shooting phaser vertical@G390: sprite_y = 0.0
+        shooting phaser direction@G391: sprite_dir = 0.0
+        shooting phaser visible@G392: sprite_vis = False
+        shooting phaser moving@G393: sprite_move = False
+        shooting phaser phase@G394: sprite_phase = 0.0
+        shooting phaser state@G395: sprite_status = 0.0
+    sound of phaser@G396: group
+        Phaser@G397: sound [SOUND#27]
+    pictures of phaser hit@G398: group
+        picture of phaser hit 1@G399: background [BACKGRND#27]
+        picture of phaser hit 2@G400: background [BACKGRND#28]
+        picture of phaser hit 3@G401: background [BACKGRND#29]
+        picture of phaser hit 4@G402: background [BACKGRND#30]
+        picture of phaser hit 5@G403: background [BACKGRND#31]
+        picture of phaser hit 6@G404: background [BACKGRND#32]
+        picture of phaser hit 7@G405: background [BACKGRND#33]
+        picture of phaser hit 8@G406: background [BACKGRND#34]
+        picture of phaser hit 9@G407: background [BACKGRND#35]
+        picture of phaser hit 10@G408: background [BACKGRND#36]
+6: stamp@G409: group
+    service of stamp@G410: function [LOCAL#150]
+    sprite of stamp@G411: sprite [SPRITE#37]
+        stamp horizontal@G412: sprite_x = 0.0
+        stamp vertical@G413: sprite_y = 0.0
+        stamp direction@G414: sprite_dir = 0.0
+        stamp visible@G415: sprite_vis = False
+        stamp moving@G416: sprite_move = False
+        stamp phase@G417: sprite_phase = 0.0
+        stamp state@G418: sprite_status = 0.0
+    sprite of stamp down@G419: sprite [SPRITE#38]
+        stamp down horizontal@G420: sprite_x = 0.0
+        stamp down vertical@G421: sprite_y = 0.0
+        stamp down direction@G422: sprite_dir = 0.0
+        stamp down visible@G423: sprite_vis = False
+        stamp down moving@G424: sprite_move = False
+        stamp down phase@G425: sprite_phase = 0.0
+        stamp down state@G426: sprite_status = 0.0
+    Stamp@G427: sound [SOUND#28]
+    pictures of stamp prints@G428: group
+        picture of stamp print 1@G429: background [BACKGRND#37]
+        picture of stamp print 2@G430: background [BACKGRND#38]
+        picture of stamp print 3@G431: background [BACKGRND#39]
+        picture of stamp print 3 (English)@G432: background [BACKGRND#40]
+        picture of stamp print 4@G433: background [BACKGRND#41]
+        picture of stamp print 4 (English)@G434: background [BACKGRND#42]
+        picture of stamp print 5@G435: background [BACKGRND#43]
+        picture of stamp print 6@G436: background [BACKGRND#44]
+        picture of stamp print 7@G437: background [BACKGRND#45]
+        picture of stamp print 8@G438: background [BACKGRND#46]
+        picture of stamp print 9@G439: background [BACKGRND#47]
+        picture of stamp print 10@G440: background [BACKGRND#48]
+7: termite@G441: group
+    service of termite@G442: function [LOCAL#159]
+    sprite of termite on hand@G443: sprite [SPRITE#39]
+        termite on hand horizontal@G444: sprite_x = 0.0
+        termite on hand vertical@G445: sprite_y = 0.0
+        termite on hand direction@G446: sprite_dir = 0.0
+        termite on hand visible@G447: sprite_vis = False
+        termite on hand moving@G448: sprite_move = False
+        termite on hand phase@G449: sprite_phase = 0.0
+        termite on hand state@G450: sprite_status = 0.0
+    sprite of termite down@G451: sprite [SPRITE#40]
+        termite down horizontal@G452: sprite_x = 0.0
+        termite down vertical@G453: sprite_y = 0.0
+        termite down direction@G454: sprite_dir = 0.0
+        termite down visible@G455: sprite_vis = False
+        termite down moving@G456: sprite_move = False
+        termite down phase@G457: sprite_phase = 0.0
+        termite down state@G458: sprite_status = 0.0
+    termite@G459: sprite [SPRITE#41]
+        termite horizontal@G460: sprite_x = 0.0
+        termite vertical@G461: sprite_y = 0.0
+        termite direction@G462: sprite_dir = 0.0
+        termite visible@G463: sprite_vis = False
+        termite moving@G464: sprite_move = False
+        termite phase@G465: sprite_phase = 0.0
+        termite state@G466: sprite_status = 0.0
+    Termite sound@G467: sound [SOUND#29]
+    squishy termite@G468: sound [SOUND#30]
+    dead termite@G469: background [BACKGRND#49]
+8: washing@G470: group
+    service of washing@G471: function [LOCAL#154]
+    restore one part@G472: function [LOCAL#5]
+    sprite of washing@G473: sprite [SPRITE#42]
+        washing horizontal@G474: sprite_x = 0.0
+        washing vertical@G475: sprite_y = 0.0
+        washing direction@G476: sprite_dir = 0.0
+        washing visible@G477: sprite_vis = False
+        washing moving@G478: sprite_move = False
+        washing phase@G479: sprite_phase = 0.0
+        washing state@G480: sprite_status = 0.0
+    sprite of proceeding washing@G481: sprite [SPRITE#43]
+        proceeding washing horizontal@G482: sprite_x = 0.0
+        proceeding washing vertical@G483: sprite_y = 0.0
+        proceeding washing direction@G484: sprite_dir = 0.0
+        proceeding washing visible@G485: sprite_vis = False
+        proceeding washing moving@G486: sprite_move = False
+        proceeding washing phase@G487: sprite_phase = 0.0
+        proceeding washing state@G488: sprite_status = 0.0
+    Sound of washing@G489: sound [SOUND#31]
+
+def Desktop Games@G1() -> ():
+    # --- sounds decompression (from ADPCM format) ---
+    # --- hammer ---
+    Smash 1@G133 = sound_conv_pcm(Smash 1@G133)
+    Smash 2@G134 = sound_conv_pcm(Smash 2@G134)
+    Smash 3@G135 = sound_conv_pcm(Smash 3@G135)
+    Smash 4@G136 = sound_conv_pcm(Smash 4@G136)
+    Smash 5@G137 = sound_conv_pcm(Smash 5@G137)
+    Smash 6@G138 = sound_conv_pcm(Smash 6@G138)
+    Smash 7@G139 = sound_conv_pcm(Smash 7@G139)
+    Smash 8@G140 = sound_conv_pcm(Smash 8@G140)
+    # --- chain-saw ---
+    Quiet chain-saw@G202 = sound_conv_pcm(Quiet chain-saw@G202)
+    Sawing chain-saw@G203 = sound_conv_pcm(Sawing chain-saw@G203)
+    # --- machine gun ---
+    machine gun@G207 = sound_conv_pcm(machine gun@G207)
+    machine gun reverberation@G208 = sound_conv_pcm(machine gun reverberation@G208)
+    # --- shell ---
+    Drop of shell 1@G247 = sound_conv_pcm(Drop of shell 1@G247)
+    Drop of shell 2@G248 = sound_conv_pcm(Drop of shell 2@G248)
+    Drop of shell 3@G249 = sound_conv_pcm(Drop of shell 3@G249)
+    Drop of shell 4@G250 = sound_conv_pcm(Drop of shell 4@G250)
+    Drop of shell 5@G251 = sound_conv_pcm(Drop of shell 5@G251)
+    Drop of shell 6@G252 = sound_conv_pcm(Drop of shell 6@G252)
+    Drop of shell 7@G253 = sound_conv_pcm(Drop of shell 7@G253)
+    Drop of shell 8@G254 = sound_conv_pcm(Drop of shell 8@G254)
+    Drop of shell 9@G255 = sound_conv_pcm(Drop of shell 9@G255)
+    # --- flame-thrower ---
+    Fire@G284 = sound_conv_pcm(Fire@G284)
+    Flame begin@G285 = sound_conv_pcm(Flame begin@G285)
+    Flame@G286 = sound_conv_pcm(Flame@G286)
+    Flame end@G287 = sound_conv_pcm(Flame end@G287)
+    # --- color-thrower ---
+    Color-thrower shooting@G370 = sound_conv_pcm(Color-thrower shooting@G370)
+    Color-thrower drop@G371 = sound_conv_pcm(Color-thrower drop@G371)
+    Phaser@G397 = sound_conv_pcm(Phaser@G397)
+    Stamp@G427 = sound_conv_pcm(Stamp@G427)
+    Sound of washing@G489 = sound_conv_pcm(Sound of washing@G489)
+    # --- termite ---
+    Termite sound@G467 = sound_conv_pcm(Termite sound@G467)
+    squishy termite@G468 = sound_conv_pcm(squishy termite@G468)
+    # --- introduction ---
+    quick(false)
+    caption('Desktop Games;   (c) Miroslav Nemecek, www.gemtree.com;   freeware')
+    switch language:  # language correction
+        case 5, 21, 27:  # Czech, Polish, Slovak
+        default:  # English
+            introduction picture@G7 = introduction picture (English)@G8
+            picture of tool selection@G14 = picture of tool selection (English)@G15
+            picture of stamp print 3@G431 = picture of stamp print 3 (English)@G432
+            picture of stamp print 4@G433 = picture of stamp print 4 (English)@G434
+    background_disp(background_back=introduction picture@G7, background_x=<default>, background_y=<default>, background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw introduction picture
+    while not((mouse_l_click or mouse_r_click)):  # waiting on press key or mouse
+        switch key_vkey:  # key input from keyboard
+            case vk_esc:  # Esc
+                exit()
+            case vk_nokey, vk_shift, vk_shift_r, vk_ctrl, vk_ctrl_r, vk_alt, vk_alt_r:  # nothing (of switch)
+            default:  # else end of waiting
+                break()
+    call initialization of Desktop mode@G12()
+    selected function (-1=end)@G24 = 0
+    while true:
+        if (selected function (-1=end)@G24 < 0):  # choice function, if it was not performed by key
+            call make selection of function@G26()
+        last selected function@G25 = selected function (-1=end)@G24
+        selected function (-1=end)@G24 = -1
+        storage of button state@G29 = mouse_l_click  # storage of button state (only for clearing flag)
+        storage of button state@G29 = mouse_r_click  # storage of button state (only for clearing flag)
+        storage of button state@G29 = false
+        there is not interrupt of active tool@G28 = true
+        switch last selected function@G25:  # service of selected function
+            case -1:  # -1: end
+                exit()
+            case 0:  # 0: hammer
+                call hammer service@G63()
+            case 1:  # 1: chain-saw
+                call chain-saw service@G142()
+            case 2:  # 2: machine gun
+                call service of machine gun@G205()
+            case 3:  # 3: flame-thrower
+                call service of flame-thrower@G257()
+            case 4:  # 4: color-thrower
+                call service of color-thrower@G294()
+            case 5:  # 5: phaser
+                call phaser service@G379()
+            case 6:  # 6: stamp
+                call service of stamp@G410()
+            case 7:  # 7: termite
+                call service of termite@G442()
+            case 8:  # 8: washing
+                call service of washing@G471()
+        sound_stop()
+
+def restore one part@G472(number 4@L7, number 5@L8) -> ():
+    local number 2@L10: real = 0.0
+    local number 3@L11: real = 0.0
+    number 5@L8 = (number 5@L8 + random(0.4) + -0.2)
+    number 4@L7 = (number 4@L7 + random(0.4) + -0.2)
+    number 2@L10 = (mouse_x - (number 4@L7 / 2))
+    number 3@L11 = (mouse_y - (number 5@L8 / 2))
+    if (number 2@L10 < 0):  # conditional executing of commands
+        number 2@L10 = 0
+    if (number 3@L11 < 0):  # conditional executing of commands
+        number 3@L11 = 0
+    background_disp(background_back=picture to storage Desktop (original)@G11, background_x=number 2@L10, background_y=number 3@L11, background_block_x=number 2@L10, background_block_y=number 3@L11, background_block_w=number 4@L7, background_block_h=number 5@L8)  # draw picture
+
+def make selection of function@G26() -> ():
+    local X begin of window@L15: real = 0.0
+    local Y begin of window@L16: real = 0.0
+    local X column of choose@L17: real = 0.0
+    local Y row of choose@L18: real = 0.0
+    X begin of window@L15 = ((map_width - picture_width(picture of tool selection@G14)) / 2)
+    Y begin of window@L16 = ((map_height - picture_height(picture of tool selection@G14)) / 2)
+    picture to storage Desktop@G10 = background_get(background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)
+    background_disp(background_back=picture of tool selection@G14, background_x=X begin of window@L15, background_y=Y begin of window@L16, background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw picture
+    storage of button state@G29 = mouse_l_click  # storage of button state (only for clearing button click flag)
+    storage of button state@G29 = mouse_r_click  # storage of button state (only for clearing button click flag)
+    there is not interrupt of active tool@G28 = true
+    tool visible@G34 = false
+    sound_stop()
+    index increment of bullet@G50 = 0
+    repeat 200 - max. number of bullets@G48 times:  # switch off bullets
+        if (bullet type (1=hit, 2=shell, 3=potsherd or splinter, 4=flying flame, 5=standing flame, 6=color, 7=termite)@G51 <> 7):  # termites will not be switched off
+            bullet visible@G58 = false
+        index of bullet@G49 = inc(index of bullet@G49)
+    mouse_cursor(mouse_cursor_pic=<default>, mouse_cursor_x=<default>, mouse_cursor_y=<default>, mouse_cursor_w=<default>, mouse_cursor_h=<default>)  # setting shape of mouse cursor - switch mouse on
+    while there is not interrupt of active tool@G28:  # waiting for make selection
+        if mouse_region(mouse_region_x=X begin of window@L15, mouse_region_y=(Y begin of window@L16 + 1), mouse_region_w=12, mouse_region_h=9):  # cursor service
+            X column of choose@L17 = integer(((mouse_x - X begin of window@L15) / 4))
+            cursor horizontal@G17 = ((X column of choose@L17 * 4) + X begin of window@L15)
+            Y row of choose@L18 = integer(((mouse_y - Y begin of window@L16 - 1) / 3))
+            cursor vertical@G18 = ((Y row of choose@L18 * 3) + Y begin of window@L16 + 1)
+            cursor visible@G20 = true
+            if mouse_l_click:  # conditional executing of commands
+                selected function (-1=end)@G24 = (X column of choose@L17 + ((2 - Y row of choose@L18) * 3))
+                break()
+        else:
+            storage of button state@G29 = mouse_l_click  # flag
+            cursor visible@G20 = false
+        if mouse_r_click:  # right button - switch menu off
+            selected function (-1=end)@G24 = last selected function@G25
+            break()
+        wait()
+        call service of selection by keyboard@G40()
+    while mouse_l:  # waiting on release of left button
+        wait()
+    cursor visible@G20 = false
+    background_disp(background_back=picture to storage Desktop@G10, background_x=<default>, background_y=<default>, background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw Desktop picture
+    mouse_cursor(mouse_cursor_pic=empty square@G3, mouse_cursor_x=<default>, mouse_cursor_y=<default>, mouse_cursor_w=<default>, mouse_cursor_h=<default>)  # setting shape of mouse cursor - switch mouse off
+
+def initialization of Desktop mode@G12() -> ():
+    local screen width@L22: real = 0.0
+    local screen height@L23: real = 0.0
+    # --- printou text "Wait..." ---
+    box_fill(graph_color=color, box_fill_x1=<default>, box_fill_y1=<default>, box_fill_x2=<default>, box_fill_y2=<default>)
+    graph_area_width(map_width)
+    textout(textout_text='Wait...', graph_color=color, textout_x=0, textout_y=4, textout_angle=<default>, textout_h=3, textout_w=<default>, textout_bold=<default>, textout_italic=<default>, textout_underline=<default>, textout_strikeout=<default>, textout_serif=<default>, textout_courier=<default>)
+    wait(0.2)
+    # --- determine screen dimensions ---
+    window_id(-1)
+    screen width@L22 = window_w
+    screen height@L23 = window_h
+    # --- setting window over whole screen ---
+    window_id(0)
+    window_frame(false)
+    window_caption(false)
+    window_top(true)
+    window_x(0)
+    window_y(0)
+    window_w(screen width@L22)
+    window_h(screen height@L23)
+    sheet@G2 = map_new(map_new_w=window_w_int, map_new_h=window_h_int)
+    # --- resetting window over whole screen ---
+    window_x(0)
+    window_y(0)
+    window_w(screen width@L22)
+    window_h(screen height@L23)
+    transparent()
+    picture to storage Desktop@G10 = background_get(background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)
+    picture to storage Desktop (original)@G11 = picture to storage Desktop@G10
+    mouse_cursor(mouse_cursor_pic=empty square@G3, mouse_cursor_x=<default>, mouse_cursor_y=<default>, mouse_cursor_w=<default>, mouse_cursor_h=<default>)  # setting shape of mouse cursor
+
+def service of machine gun@G205() -> ():
+    local hit picture@L27: background [background dat=11,50]
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # vyvolání menu pravým tlačítkem myši
+            break()
+        tool horizontal@G31 = mouse_x
+        tool vertical@G32 = (mouse_y - 6)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # shooting
+            sprite of tool@G30 = sprite of shooting machine gun@G217
+            if not(storage of button state@G29):
+                sound_stop()
+            storage of button state@G29 = true
+            sound_play(sound_play_sound=machine gun@G207, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)
+            switch integer(random(4)):  # random hit picture
+                case 0:  # 0
+                    hit picture@L27 = picture of hit by machine gun 0@G242
+                case 1:  # 1
+                    hit picture@L27 = picture of hit by machine gun 1@G243
+                case 2:  # 2
+                    hit picture@L27 = picture of hit by machine gun 2@G244
+                case 3:  # 3
+                    hit picture@L27 = picture of hit by machine gun 3@G245
+            call death of termites@G46(X hit@L164=mouse_x, Y hit@L165=mouse_y)
+            call creation of hit@G45(picture of hit@L55=hit picture@L27, hit dispersion@L56=0.5, sprite of hit@L57=sprite of hit by machine gun@G225)
+            call create shell@G206(sprite of shell@L70=sprite of shell from machine gun@G233)
+        else:
+            sprite of tool@G30 = sprite of quiet machine gun@G209
+            if storage of button state@G29:
+                sound_stop()
+                sound_play(sound_play_sound=machine gun reverberation@G208, sound_play_volume=<default>, sound_play_balance=<default>, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)
+            storage of button state@G29 = false
+        call service of selection by keyboard@G40()
+        wait()
+
+def calculation of sound stereobase@G39() -> ():
+    sound stereobase@G38 = (((mouse_x / map_width) - 0.5) * 1.4)
+
+def service of bullets flight@G43() -> ():
+    local random picture@L34: background [background dat=11,51]
+    local random sound@L35: sound [sound dat=13,32]
+    local there was found fire@L36: logic = False
+    local there was found termite@L37: logic = False
+    local color@L38: real = 0.0
+    local new X coordinate@L39: real = 0.0
+    local new Y coordinate@L40: real = 0.0
+    index increment of bullet@G50 = 0
+    there was found fire@L36 = false
+    repeat 200 - max. number of bullets@G48 times:
+        if bullet visible@G58:
+            switch bullet type (1=hit, 2=shell, 3=potsherd or splinter, 4=flying flame, 5=standing flame, 6=color, 7=termite)@G51:
+                case 1:  # 1: hit
+                    if (bullet phase@G60 = 0):
+                        bullet visible@G58 = false
+                case 2:  # 2: shell
+                    bullet horizontal@G55 = (bullet horizontal@G55 + X speed@G52)
+                    bullet vertical@G56 = (bullet vertical@G56 + Y speed@G53)
+                    Y speed@G53 = (Y speed@G53 - 0.2)
+                    if (bullet vertical@G56 < 0):  # test of shell drop
+                        bullet visible@G58 = false
+                        switch integer(random(9)):  # random sound of shell drop
+                            case 0:  # 0
+                                random sound@L35 = Drop of shell 1@G247
+                            case 1:  # 1
+                                random sound@L35 = Drop of shell 2@G248
+                            case 2:  # 2
+                                random sound@L35 = Drop of shell 3@G249
+                            case 3:  # 3
+                                random sound@L35 = Drop of shell 4@G250
+                            case 4:  # 4
+                                random sound@L35 = Drop of shell 5@G251
+                            case 5:  # 5
+                                random sound@L35 = Drop of shell 6@G252
+                            case 6:  # 6
+                                random sound@L35 = Drop of shell 7@G253
+                            case 7:  # 7
+                                random sound@L35 = Drop of shell 8@G254
+                            case 8:  # 8
+                                random sound@L35 = Drop of shell 9@G255
+                        sound_play(sound_play_sound=random sound@L35, sound_play_volume=0.5, sound_play_balance=(((bullet horizontal@G55 / map_width) - 0.7) * 4), sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)
+                case 3:  # 3: potsherd or splinter
+                    bullet horizontal@G55 = (bullet horizontal@G55 + X speed@G52)
+                    bullet vertical@G56 = (bullet vertical@G56 + Y speed@G53)
+                    Y speed@G53 = (Y speed@G53 - 0.2)
+                    if (bullet vertical@G56 < 0):  # test of drop of potsherd/splinter
+                        bullet visible@G58 = false
+                case 4:  # 4: flying flame
+                    if (bullet phase@G60 = 0):  # test of flame arrival
+                        bullet@G54 = sprite of standing flame@G275
+                        bullet horizontal@G55 = (bullet horizontal@G55 + random(8) + -4)
+                        bullet vertical@G56 = (bullet vertical@G56 + random(8) + -4)
+                        bullet type (1=hit, 2=shell, 3=potsherd or splinter, 4=flying flame, 5=standing flame, 6=color, 7=termite)@G51 = 5
+                case 5:  # 5: standing flame
+                    switch integer(random(4)):  # multibranch control structure
+                        case 0:  # 0
+                            random picture@L34 = picture of flame-thrower hit 1@G289
+                        case 1:  # 1
+                            random picture@L34 = picture of flame-thrower hit 2@G290
+                        case 2:  # 2
+                            random picture@L34 = picture of flame-thrower hit 3@G291
+                        case 3:  # 3
+                            random picture@L34 = picture of flame-thrower hit 4@G292
+                    background_disp(background_back=random picture@L34, background_x=(bullet horizontal@G55 + random + -0.5), background_y=(bullet vertical@G56 + random + -0.5), background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)
+                    call death of termites@G46(X hit@L164=(bullet horizontal@G55 - 0.75), Y hit@L165=(bullet vertical@G56 - 0.75))
+                    if not(bullet moving@G59):  # test of flame arrival
+                        bullet visible@G58 = false
+                    else:
+                        there was found fire@L36 = true
+                case 6:  # 6: color
+                    if (bullet phase@G60 = 0):  # test of color arrival
+                        sound_play(sound_play_sound=Color-thrower drop@G371, sound_play_volume=<default>, sound_play_balance=(((bullet horizontal@G55 / map_width) - 0.5) * 4), sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)
+                        switch integer(random(5)):  # random picture of blot
+                            case 0:  # 0
+                                random picture@L34 = picture of hit by color-thrower 1@G373
+                            case 1:  # 1
+                                random picture@L34 = picture of hit by color-thrower 2@G374
+                            case 2:  # 2
+                                random picture@L34 = picture of hit by color-thrower 3@G375
+                            case 3:  # 3
+                                random picture@L34 = picture of hit by color-thrower 4@G376
+                            case 4:  # 4
+                                random picture@L34 = picture of hit by color-thrower 5@G377
+                        background_disp(background_back=random picture@L34, background_x=(bullet horizontal@G55 - 1), background_y=(bullet vertical@G56 - 1), background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw picture
+                        switch bullet@G54:  # color for stuff
+                            case sprite of color - red@G305:  # red
+                                color@L38 = color
+                            case sprite of color - green@G313:  # green
+                                color@L38 = color
+                            case sprite of color - blue@G321:  # blue
+                                color@L38 = color
+                            case sprite of color - yellow@G329:  # yellow
+                                color@L38 = color
+                            case sprite of color - purple@G337:  # purple
+                                color@L38 = color
+                            case sprite of color - cyan@G345:  # cyan
+                                color@L38 = color
+                            case sprite of color - orange@G353:  # orange
+                                color@L38 = color
+                            case sprite of color - pink@G361:  # pink
+                                color@L38 = color
+                        fill(graph_color=color@L38, fill_x=(bullet horizontal@G55 + 1), fill_y=(bullet vertical@G56 + 1))
+                        call death of termites@G46(X hit@L164=(bullet horizontal@G55 + 1), Y hit@L165=(bullet vertical@G56 + 1))
+                        bullet visible@G58 = false
+                case 7:  # 7: termite
+                    there was found termite@L37 = true
+                    point(graph_color=color, graph_width=5, point_x=(bullet horizontal@G55 + 0.5), point_y=(bullet vertical@G56 + 0.5))
+                    if (random < 0.05):  # termite movement
+                        new X coordinate@L39 = (bullet horizontal@G55 + -0.5 + random)
+                        new Y coordinate@L40 = (bullet vertical@G56 + -0.5 + random)
+                        if (new X coordinate@L39 < 0):  # X limitation from the left
+                            new X coordinate@L39 = 0
+                        if (new X coordinate@L39 > dec(map_width)):  # Y limitation from the right
+                            new X coordinate@L39 = dec(map_width)
+                        if (new Y coordinate@L40 < 0):  # Y limitation from below
+                            new Y coordinate@L40 = 0
+                        if (new Y coordinate@L40 > dec(map_height)):  # Y limitation from above
+                            new Y coordinate@L40 = dec(map_height)
+                        bullet horizontal@G55 = new X coordinate@L39
+                        bullet vertical@G56 = new Y coordinate@L40
+        index of bullet@G49 = inc(index of bullet@G49)
+    if there was found fire@L36:  # sound of fire
+        sound_play(sound_play_sound=Fire@G284, sound_play_volume=<default>, sound_play_balance=<default>, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)
+    else:
+        sound_stop(Fire@G284)
+    if there was found termite@L37:  # sound of termite
+        sound_play(sound_play_sound=Termite sound@G467, sound_play_volume=0.2, sound_play_balance=<default>, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)
+    else:
+        sound_stop(Termite sound@G467)
+
+def creation of bullet@G44(type of new bullet@L43, sprite of new bullet@L44) -> ():
+    index increment of bullet@G50 = 0
+    index of bullet@G49 = writting index of bullets@G42
+    repeat 200 - max. number of bullets@G48 times:  # search new bullet
+        if not(bullet visible@G58):
+            break()
+        index of bullet@G49 = inc(index of bullet@G49)
+    writting index of bullets@G42 = index of bullet@G49
+    bullet type (1=hit, 2=shell, 3=potsherd or splinter, 4=flying flame, 5=standing flame, 6=color, 7=termite)@G51 = type of new bullet@L43
+    X speed@G52 = 0
+    Y speed@G53 = 0
+    bullet visible@G58 = false
+    bullet@G54 = sprite of new bullet@L44
+    bullet phase@G60 = 1
+    writting index of bullets@G42 = (inc(writting index of bullets@G42) mod 200 - max. number of bullets@G48)
+
+def creation of hit@G45(picture of hit@L55, hit dispersion@L56, sprite of hit@L57) -> ():
+    local X coordinate of hit@L66: real = 0.0
+    local Y coordinate of hit@L67: real = 0.0
+    call creation of bullet@G44(type of new bullet@L43=1, sprite of new bullet@L44=sprite of hit@L57)
+    X coordinate of hit@L66 = (mouse_x + random(hit dispersion@L56) + -(hit dispersion@L56 / 2) + -(picture_width(picture of hit@L55) / 2))
+    Y coordinate of hit@L67 = (mouse_y + random(hit dispersion@L56) + -(hit dispersion@L56 / 2) + -(picture_height(picture of hit@L55) / 2))
+    bullet horizontal@G55 = X coordinate of hit@L66
+    bullet vertical@G56 = Y coordinate of hit@L67
+    background_disp(background_back=picture of hit@L55, background_x=X coordinate of hit@L66, background_y=Y coordinate of hit@L67, background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)
+    bullet visible@G58 = true
+
+def create shell@G206(sprite of shell@L70) -> ():
+    local X coordinate of shell@L79: real = 0.0
+    local Y coordinate of shell@L80: real = 0.0
+    call creation of bullet@G44(type of new bullet@L43=2, sprite of new bullet@L44=sprite of shell@L70)
+    X coordinate of shell@L79 = (mouse_x + 3 + random)
+    Y coordinate of shell@L80 = (mouse_y - 3 - random)
+    X speed@G52 = random
+    Y speed@G53 = random
+    bullet horizontal@G55 = X coordinate of shell@L79
+    bullet vertical@G56 = Y coordinate of shell@L80
+    bullet visible@G58 = true
+
+def hammer service@G63() -> ():
+    local picture of hit@L84: background [background dat=11,53]
+    local random sound@L85: sound [sound dat=13,33]
+    local color brightness@L86: real = 0.0
+    local X offset@L87: real = 0.0
+    local Y offset@L88: real = 0.0
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # evocation of menu by right mouse button
+            break()
+        tool horizontal@G31 = mouse_x
+        tool vertical@G32 = (mouse_y - 4.66 /*(height of drop place in sprite)*/)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # hit
+            sprite of tool@G30 = sprite of knock hammer@G74
+            if not(storage of button state@G29):  # hit service
+                call death of termites@G46(X hit@L164=mouse_x, Y hit@L165=mouse_y)
+                color brightness@L86 = 0
+                Y offset@L88 = -0.5
+                repeat 11 times:  # detection of color brightness in destination place
+                    X offset@L87 = -0.5
+                    repeat 11 times:  # detection of brightness in one line
+                        color brightness@L86 = (color brightness@L86 + determine color brightness by offset@G64(X offset@L91=X offset@L87, Y offset@L92=Y offset@L88))
+                        X offset@L87 = (X offset@L87 + 0.1)
+                    Y offset@L88 = (Y offset@L88 + 0.1)
+                switch integer(((color brightness@L86 / 11 /*(počet bodů na testované lince barev)*/ / 11 /*(počet testovaných linek s barvou)*/) * 8 /*(počet možných zvuků)*/)):  # sound by color brightness below mouse cursor
+                    case 0:  # 0
+                        random sound@L85 = Smash 1@G133
+                    case 1:  # 1
+                        random sound@L85 = Smash 2@G134
+                    case 2:  # 2
+                        random sound@L85 = Smash 3@G135
+                    case 3:  # 3
+                        random sound@L85 = Smash 4@G136
+                    case 4:  # 4
+                        random sound@L85 = Smash 5@G137
+                    case 5:  # 5
+                        random sound@L85 = Smash 6@G138
+                    case 6:  # 6
+                        random sound@L85 = Smash 7@G139
+                    case 7:  # 7
+                        random sound@L85 = Smash 8@G140
+                sound_stop()
+                sound_play(sound_play_sound=random sound@L85, sound_play_volume=2, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)
+                switch integer(random(8)):  # random hit picture
+                    case 0:  # 0
+                        picture of hit@L84 = picture of hammer hit 1@G124
+                    case 1:  # 1
+                        picture of hit@L84 = picture of hammer hit 2@G125
+                    case 2:  # 2
+                        picture of hit@L84 = picture of hammer hit 3@G126
+                    case 3:  # 3
+                        picture of hit@L84 = picture of hammer hit 4@G127
+                    case 4:  # 4
+                        picture of hit@L84 = picture of hammer hit 5@G128
+                    case 5:  # 5
+                        picture of hit@L84 = picture of hammer hit 6@G129
+                    case 6:  # 6
+                        picture of hit@L84 = picture of hammer hit 7@G130
+                    case 7:  # 7
+                        picture of hit@L84 = picture of hammer hit 8@G131
+                background_disp(background_back=picture of hit@L84, background_x=(mouse_x - (picture_width(picture of hit@L84) / 2) - ((random - 0.5) * 0.2)), background_y=(mouse_y - (picture_height(picture of hit@L84) / 2) - ((random - 0.5) * 0.2)), background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw picture
+                repeat integer((color brightness@L86 / 5)) times:  # create potsherds
+                    call create potsherd@G65()
+            storage of button state@G29 = true
+        else:
+            sprite of tool@G30 = sprite of quiet hammer@G66
+            storage of button state@G29 = false
+        wait()
+        call service of selection by keyboard@G40()
+
+def determine color brightness by offset@G64(X offset@L91, Y offset@L92) -> (color brightness@L94):
+    local loaded color@L95: real = 0.0
+    loaded color@L95 = get_point(get_point_x=(mouse_x + X offset@L91), get_point_y=(mouse_y + Y offset@L92))
+    color brightness@L94 = (((loaded color@L95 bit_and 0xff) + ((loaded color@L95 bit_and 0xff00) / 256) + ((loaded color@L95 bit_and 0xff0000) / 256 / 256)) / 256 / 3)
+
+def create potsherd@G65() -> ():
+    local X coordinate of potsherd@L99: real = 0.0
+    local Y coordinate of potsherd@L100: real = 0.0
+    switch integer(random(5)):  # random potsherd
+        case 0:  # 0
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of potsherd 1@G83)
+        case 1:  # 1
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of potsherd 2@G91)
+        case 2:  # 2
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of potsherd 3@G99)
+        case 3:  # 3
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of potsherd 4@G107)
+        case 4:  # 4
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of potsherd 5@G115)
+    X coordinate of potsherd@L99 = (mouse_x + random + -0.5)
+    Y coordinate of potsherd@L100 = (mouse_y + random + -0.5)
+    X speed@G52 = (random(2) - 1)
+    Y speed@G53 = (random(2) - 1)
+    bullet horizontal@G55 = X coordinate of potsherd@L99
+    bullet vertical@G56 = Y coordinate of potsherd@L100
+    bullet visible@G58 = true
+
+def service of selection by keyboard@G40() -> ():
+    there is not interrupt of active tool@G28 = false
+    switch key_vkey:
+        case vk_esc:  # Esc
+            exit()
+        case vk_1, vk_num1, vk_f1:  # 0
+            selected function (-1=end)@G24 = 0
+        case vk_2, vk_num2, vk_f2:  # 1
+            selected function (-1=end)@G24 = 1
+        case vk_3, vk_num3, vk_f3:  # 2
+            selected function (-1=end)@G24 = 2
+        case vk_4, vk_num4, vk_f4:  # 3
+            selected function (-1=end)@G24 = 3
+        case vk_5, vk_num5, vk_f5:  # 4
+            selected function (-1=end)@G24 = 4
+        case vk_6, vk_num6, vk_f6:  # 5
+            selected function (-1=end)@G24 = 5
+        case vk_7, vk_num7, vk_f7:  # 6
+            selected function (-1=end)@G24 = 6
+        case vk_8, vk_num8, vk_f8:  # 7
+            selected function (-1=end)@G24 = 7
+        case vk_9, vk_num9, vk_f9:  # 8
+            selected function (-1=end)@G24 = 8
+        default:
+            there is not interrupt of active tool@G28 = true
+
+def chain-saw service@G142() -> ():
+    local old X coordinate of drawing@L107: real = 0.0
+    local old Y coordinate of drawing@L108: real = 0.0
+    local new X coordinate of drawing@L109: real = 0.0
+    local new Y coordinate of drawing@L110: real = 0.0
+    # --- sprite initialization ---
+    sprite of tool@G30 = sprite of quiet chain-saw@G144
+    tool horizontal@G31 = (mouse_x - 3)
+    tool vertical@G32 = (mouse_y - 3)
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # sawing or transport
+            sprite of tool@G30 = sprite of sawing chain-saw@G152
+            tool horizontal@G31 = (mouse_x - 3)
+            tool vertical@G32 = (mouse_y - 3)
+            call death of termites@G46(X hit@L164=(tool horizontal@G31 + 3), Y hit@L165=(tool vertical@G32 + 3))
+            new X coordinate of drawing@L109 = (tool horizontal@G31 + 3)
+            new Y coordinate of drawing@L110 = (tool vertical@G32 + 3)
+            if not(storage of button state@G29):  # start sawing
+                sound_stop()
+                old X coordinate of drawing@L107 = new X coordinate of drawing@L109
+                old Y coordinate of drawing@L108 = new Y coordinate of drawing@L110
+            storage of button state@G29 = true
+            line(graph_color=color, graph_width=2, line_x1=old X coordinate of drawing@L107, line_y1=old Y coordinate of drawing@L108, line_x2=new X coordinate of drawing@L109, line_y2=new Y coordinate of drawing@L110)
+            repeat integer((sqrt((sqr((old X coordinate of drawing@L107 - new X coordinate of drawing@L109)) + sqr((old Y coordinate of drawing@L108 - new Y coordinate of drawing@L110)))) * 7)) times:  # create splinters
+                call create splinter@G143(X coordinate of sawing@L113=new X coordinate of drawing@L109, Y coordinate of sawing@L114=new Y coordinate of drawing@L110)
+            old X coordinate of drawing@L107 = new X coordinate of drawing@L109
+            old Y coordinate of drawing@L108 = new Y coordinate of drawing@L110
+            sound_play(sound_play_sound=Sawing chain-saw@G203, sound_play_volume=2, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)
+        else:
+            sprite of tool@G30 = sprite of quiet chain-saw@G144
+            tool horizontal@G31 = (mouse_x - 3)
+            tool vertical@G32 = (mouse_y - 3)
+            if storage of button state@G29:  # stop sawing
+                sound_stop()
+            sound_play(sound_play_sound=Quiet chain-saw@G202, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)
+            storage of button state@G29 = false
+        wait()
+        call service of selection by keyboard@G40()
+
+def create splinter@G143(X coordinate of sawing@L113, Y coordinate of sawing@L114) -> ():
+    local X coordinate of splinter@L116: real = 0.0
+    local Y coordinate of splinter@L117: real = 0.0
+    switch integer(random(5)):  # random splinter
+        case 0:  # 0
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of splinter 1@G161)
+        case 1:  # 1
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of splinter 2@G169)
+        case 2:  # 2
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of splinter 3@G177)
+        case 3:  # 3
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of splinter 4@G185)
+        case 4:  # 4
+            call creation of bullet@G44(type of new bullet@L43=3, sprite of new bullet@L44=sprite of splinter 5@G193)
+    X coordinate of splinter@L116 = (X coordinate of sawing@L113 + random + -0.5)
+    Y coordinate of splinter@L117 = (Y coordinate of sawing@L114 + random + -0.5)
+    X speed@G52 = (random(2) - 1)
+    Y speed@G53 = (random(2) - 1)
+    bullet horizontal@G55 = X coordinate of splinter@L116
+    bullet vertical@G56 = Y coordinate of splinter@L117
+    bullet visible@G58 = true
+
+def service of flame-thrower@G257() -> ():
+    local hit picture@L121: background [background dat=11,54]
+    sprite of tool@G30 = sprite of flame-thrower@G259
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        tool horizontal@G31 = mouse_x
+        tool vertical@G32 = (mouse_y - 8)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # shooting
+            if not(storage of button state@G29):
+                sound_stop()
+                sound_play(sound_play_sound=Flame begin@G285, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)  # play sound
+            sound_play(sound_play_sound=Flame@G286, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)  # play sound
+            storage of button state@G29 = true
+            call create flame@G258()
+        else:
+            if storage of button state@G29:  # terminate sounds
+                sound_play(sound_play_sound=Flame@G286, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=false)  # play sound - flame (for overlap with end sound)
+                sound_play(sound_play_sound=Flame end@G287, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)  # play sound - end
+            storage of button state@G29 = false
+        call service of selection by keyboard@G40()
+        wait()
+
+def create flame@G258() -> ():
+    local X coordinate of flame@L125: real = 0.0
+    local Y coordinate of flame@L126: real = 0.0
+    call creation of bullet@G44(type of new bullet@L43=4, sprite of new bullet@L44=sprite of flame@G267)
+    bullet horizontal@G55 = (mouse_x + 3 + random(0.2))
+    bullet vertical@G56 = (mouse_y - 3.4 - random(0.2))
+    bullet visible@G58 = true
+    bullet horizontal@G55 = (bullet horizontal@G55 - 3 - random)
+    bullet vertical@G56 = (bullet vertical@G56 + 2 + random)
+
+def service of color-thrower@G294() -> ():
+    local hit picture@L130: background [background dat=11,55]
+    local recharge counter@L131: real = 0.0
+    sprite of tool@G30 = sprite of color-thrower@G296
+    tool visible@G34 = true
+    recharge counter@L131 = 0
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        tool horizontal@G31 = mouse_x
+        tool vertical@G32 = (mouse_y - 8)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        recharge counter@L131 = dec(recharge counter@L131)
+        if mouse_l:  # shooting
+            if (recharge counter@L131 <= 0):  # shooting service
+                sound_stop()
+                sound_play(sound_play_sound=Color-thrower shooting@G370, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)  # play sound of shooting
+                recharge counter@L131 = 9
+                call create color@G295()
+        call service of selection by keyboard@G40()
+        wait()
+
+def create color@G295() -> ():
+    local X coordinate of color@L135: real = 0.0
+    local Y coordinate of color@L136: real = 0.0
+    local sprite of color@L137: sprite [sprite dat=12,47]
+    switch integer(random(8)):  # random color
+        case 0:  # 0
+            sprite of color@L137 = sprite of color - red@G305
+        case 1:  # 1
+            sprite of color@L137 = sprite of color - green@G313
+        case 2:  # 2
+            sprite of color@L137 = sprite of color - blue@G321
+        case 3:  # 3
+            sprite of color@L137 = sprite of color - yellow@G329
+        case 4:  # 4
+            sprite of color@L137 = sprite of color - purple@G337
+        case 5:  # 5
+            sprite of color@L137 = sprite of color - cyan@G345
+        case 6:  # 6
+            sprite of color@L137 = sprite of color - orange@G353
+        case 7:  # 7
+            sprite of color@L137 = sprite of color - pink@G361
+    call creation of bullet@G44(type of new bullet@L43=6, sprite of new bullet@L44=sprite of color@L137)
+    bullet horizontal@G55 = (mouse_x + 3 + random(0.2))
+    bullet vertical@G56 = (mouse_y - 3.4 - random(0.2))
+    bullet visible@G58 = true
+    bullet horizontal@G55 = (bullet horizontal@G55 - 4 - random)
+    bullet vertical@G56 = (bullet vertical@G56 + 2.4 + random)
+
+def phaser service@G379() -> ():
+    local hit picture@L148: background [background dat=11,56]
+    local discharge counter@L149: real = 0.0
+    sprite of tool@G30 = sprite of phaser@G380
+    tool visible@G34 = true
+    discharge counter@L149 = 0
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        tool horizontal@G31 = (mouse_x - 2)
+        tool vertical@G32 = (mouse_y - 8)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if (mouse_l_click and (discharge counter@L149 <= 0)):  # begin shoot
+            discharge counter@L149 = 6
+            sound_stop()
+            sound_play(sound_play_sound=Phaser@G397, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)  # play sound of shoot
+        if (discharge counter@L149 > 0):  # service of shoot
+            discharge counter@L149 = dec(discharge counter@L149)
+            sprite of tool@G30 = sprite of shooting phaser@G388
+            call death of termites@G46(X hit@L164=mouse_x, Y hit@L165=mouse_y)
+            switch integer(random(10)):  # random hit picture
+                case 0:  # 0
+                    hit picture@L148 = picture of phaser hit 1@G399
+                case 1:  # 1
+                    hit picture@L148 = picture of phaser hit 2@G400
+                case 2:  # 2
+                    hit picture@L148 = picture of phaser hit 3@G401
+                case 3:  # 3
+                    hit picture@L148 = picture of phaser hit 4@G402
+                case 4:  # 4
+                    hit picture@L148 = picture of phaser hit 5@G403
+                case 5:  # 5
+                    hit picture@L148 = picture of phaser hit 6@G404
+                case 6:  # 6
+                    hit picture@L148 = picture of phaser hit 7@G405
+                case 7:  # 7
+                    hit picture@L148 = picture of phaser hit 8@G406
+                case 8:  # 8
+                    hit picture@L148 = picture of phaser hit 9@G407
+                case 9:  # 9
+                    hit picture@L148 = picture of phaser hit 10@G408
+            background_disp(background_back=hit picture@L148, background_x=(tool horizontal@G31 - -0.2 - random(0.1)), background_y=(tool vertical@G32 + 6 + random(0.1)), background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw picture
+        else:
+            sprite of tool@G30 = sprite of phaser@G380
+        call service of selection by keyboard@G40()
+        wait()
+
+def service of stamp@G410() -> ():
+    local print picture@L153: background [background dat=11,57]
+    sprite of tool@G30 = sprite of stamp@G411
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        tool horizontal@G31 = (mouse_x - 1.5)
+        tool vertical@G32 = (mouse_y - 1.5)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # print of stamp
+            sprite of tool@G30 = sprite of stamp down@G419
+            if mouse_l_click:  # it is first print
+                sound_stop()
+                sound_play(sound_play_sound=Stamp@G427, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)  # play sound of stamp
+                switch integer(random(10)):  # random picture
+                    case 0:  # 0
+                        print picture@L153 = picture of stamp print 1@G429
+                    case 1:  # 1
+                        print picture@L153 = picture of stamp print 2@G430
+                    case 2:  # 2
+                        print picture@L153 = picture of stamp print 3@G431
+                    case 3:  # 3
+                        print picture@L153 = picture of stamp print 4@G433
+                    case 4:  # 4
+                        print picture@L153 = picture of stamp print 5@G435
+                    case 5:  # 5
+                        print picture@L153 = picture of stamp print 6@G436
+                    case 6:  # 6
+                        print picture@L153 = picture of stamp print 7@G437
+                    case 7:  # 7
+                        print picture@L153 = picture of stamp print 8@G438
+                    case 8:  # 8
+                        print picture@L153 = picture of stamp print 9@G439
+                    case 9:  # 9
+                        print picture@L153 = picture of stamp print 10@G440
+                background_disp(background_back=print picture@L153, background_x=tool horizontal@G31, background_y=tool vertical@G32, background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)  # draw picture of print
+                call death of termites@G46(X hit@L164=mouse_x, Y hit@L165=mouse_y)
+        else:
+            sprite of tool@G30 = sprite of stamp@G411
+        call service of selection by keyboard@G40()
+        wait()
+
+def service of washing@G471() -> ():
+    local X cut@L157: real = 0.0
+    local Y cut@L158: real = 0.0
+    sprite of tool@G30 = sprite of washing@G473
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        tool horizontal@G31 = (mouse_x - 2)
+        tool vertical@G32 = (mouse_y - 8)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # service of washing
+            sprite of tool@G30 = sprite of proceeding washing@G481
+            if not(storage of button state@G29):  # switch sounds off
+                sound_stop()
+            sound_play(sound_play_sound=Sound of washing@G489, sound_play_volume=<default>, sound_play_balance=sound stereobase@G38, sound_play_speed=<default>, sound_play_loop=0, sound_play_stop=false)  # play sound of washing
+            call restore one part@G472(number 5@L8=2.5, number 4@L7=1)
+            call restore one part@G472(number 5@L8=2.25, number 4@L7=1.5)
+            call restore one part@G472(number 5@L8=2, number 4@L7=2)
+            call restore one part@G472(number 5@L8=1.5, number 4@L7=2.25)
+            call restore one part@G472(number 5@L8=1, number 4@L7=2.5)
+        else:
+            sprite of tool@G30 = sprite of washing@G473
+            if storage of button state@G29:  # switch sounds off
+                sound_stop()
+        storage of button state@G29 = mouse_l
+        call service of selection by keyboard@G40()
+        wait()
+
+def service of termite@G442() -> ():
+    sprite of tool@G30 = sprite of termite on hand@G443
+    tool visible@G34 = true
+    while there is not interrupt of active tool@G28:
+        if mouse_r_click:  # call menu by right mouse button
+            break()
+        tool horizontal@G31 = (mouse_x - 1)
+        tool vertical@G32 = (mouse_y - 1)
+        call calculation of sound stereobase@G39()
+        call service of bullets flight@G43()
+        if mouse_l:  # put termite down
+            sprite of tool@G30 = sprite of termite down@G451
+            if not(storage of button state@G29):  # it is first push
+                call creation of bullet@G44(type of new bullet@L43=7, sprite of new bullet@L44=termite@G459)
+                bullet horizontal@G55 = (mouse_x - 0.5)
+                bullet vertical@G56 = (mouse_y - 0.5)
+                bullet visible@G58 = true
+        else:
+            sprite of tool@G30 = sprite of termite on hand@G443
+        storage of button state@G29 = mouse_l
+        call service of selection by keyboard@G40()
+        wait()
+
+def death of termites@G46(X hit@L164, Y hit@L165) -> ():
+    index increment of bullet@G50 = 0
+    repeat 200 - max. number of bullets@G48 times:
+        if (bullet visible@G58 and (bullet type (1=hit, 2=shell, 3=potsherd or splinter, 4=flying flame, 5=standing flame, 6=color, 7=termite)@G51 = 7) and (abs((X hit@L164 - (bullet horizontal@G55 + 0.5))) < 1.5) and (abs((Y hit@L165 - (bullet vertical@G56 + 0.5))) < 1.5)):
+            background_disp(background_back=dead termite@G469, background_x=bullet horizontal@G55, background_y=bullet vertical@G56, background_block_x=<default>, background_block_y=<default>, background_block_w=<default>, background_block_h=<default>)
+            bullet visible@G58 = false
+            sound_play(sound_play_sound=squishy termite@G468, sound_play_volume=2, sound_play_balance=<default>, sound_play_speed=<default>, sound_play_loop=<default>, sound_play_stop=<default>)
+        index of bullet@G49 = inc(index of bullet@G49)
+
