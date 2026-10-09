@@ -4,6 +4,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 RE="$(cd "$ROOT/../re" && pwd)"
+IDENTITY="${CODESIGN_IDENTITY:--}"
 BUILD="$ROOT/build"
 APP="$BUILD/Desktop Games.app"
 
@@ -60,5 +61,9 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 </plist>
 PLIST
 
-codesign --force --deep --sign - "$APP"
+if [ "$IDENTITY" = "-" ]; then
+    codesign --force --sign - "$APP"
+else
+    codesign --force --options runtime --timestamp --sign "$IDENTITY" "$APP"
+fi
 echo "==> Done: $APP"

@@ -15,4 +15,7 @@ cp -R "$APP" "$STAGE/"
 ln -s /Applications "$STAGE/Applications"
 hdiutil create -volname "Desktop Games" -srcfolder "$STAGE" -fs HFS+ -format UDZO -ov "$DMG" >/dev/null
 rm -rf "$STAGE"
+if [ "${CODESIGN_IDENTITY:--}" != "-" ]; then
+    codesign --timestamp --sign "$CODESIGN_IDENTITY" "$DMG"
+fi
 echo "==> Done: $DMG"

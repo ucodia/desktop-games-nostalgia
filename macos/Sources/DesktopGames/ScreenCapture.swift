@@ -37,8 +37,8 @@ enum ScreenCapture {
 }
 
 /// Settles Screen Recording access on the intro window, before the game covers the screen.
-/// macOS shows its own permission popup only the first time a build asks, so later launches
-/// without access offer a sheet instead. A new grant applies after "Quit & Reopen".
+/// macOS shows its own permission popup only the first time an app identity asks, so later
+/// launches without access offer a sheet instead. A new grant applies after "Quit & Reopen".
 @MainActor
 enum ScreenRecordingGate {
     private static let requestedKey = "screenCaptureRequestedForBuild"
@@ -73,7 +73,8 @@ enum ScreenRecordingGate {
         _ = try? await SCShareableContent.excludingDesktopWindows(false, onScreenWindowsOnly: true)
     }
 
-    /// The code signature hash macOS ties the permission to (it changes with every ad-hoc build).
+    /// The identity macOS ties the permission to: the team of a Developer ID build, or the code
+    /// hash of an ad-hoc build (which changes with every build).
     private static func codeIdentity() -> String? {
         var code: SecCode?
         guard SecCodeCopySelf([], &code) == errSecSuccess, let code else { return nil }
@@ -81,8 +82,9 @@ enum ScreenRecordingGate {
         guard SecCodeCopyStaticCode(code, [], &staticCode) == errSecSuccess, let staticCode else { return nil }
         var info: CFDictionary?
         guard SecCodeCopySigningInformation(staticCode, [], &info) == errSecSuccess,
-              let dict = info as? [String: Any],
-              let unique = dict[kSecCodeInfoUnique as String] as? Data else { return nil }
+              let dict = info as? [String: Any] else { return nil }
+        if let team = dict[kSecCodeInfoTeamIdentifier as String] as? String { return team }
+        guard let unique = dict[kSecCodeInfoUnique as String] as? Data else { return nil }
         return unique.map { String(format: "%02x", $0) }.joined()
     }
 }

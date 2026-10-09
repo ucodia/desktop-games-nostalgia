@@ -39,17 +39,6 @@ Open **[ucodia.github.io/desktop-games-nostalgia](https://ucodia.github.io/deskt
 
 Download `Desktop-Games-1.0.0.dmg` from the [Releases](../../releases) page, open it and drag **Desktop Games** to **Applications**. Requires macOS 14 Sonoma or later (Apple silicon or Intel).
 
-### "Desktop Games can't be opened"
-
-The app is not signed with an Apple Developer ID or notarized, so macOS blocks it the first time. Either:
-
-- Open it once, then go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to the message about Desktop Games; or
-- Remove the quarantine flag in Terminal:
-
-  ```sh
-  xattr -dr com.apple.quarantine "/Applications/Desktop Games.app"
-  ```
-
 ### Screen Recording permission
 
 To play on your actual screen, the app needs **Screen Recording** access (it takes a single screenshot when the game starts). Without it, you play on your wallpaper.
@@ -67,7 +56,7 @@ If Desktop Games does not appear in the list, quit System Settings and open it a
 tccutil reset ScreenCapture io.github.ucodia.desktopgames
 ```
 
-Because the app is only ad-hoc signed, macOS ties the permission to that exact build. After installing a new version, the permission has to be renewed: turn Desktop Games off and on again in the list (or remove it and run the reset command above).
+If you used the earlier unsigned download, macOS treats this signed version as a different app: turn Desktop Games off and on again in the list (or remove it and run the reset command above) once.
 
 ## How it was made
 
@@ -100,6 +89,18 @@ Requirements: macOS 14 or later, Xcode with Swift 6, and [uv](https://docs.astra
 2. Optionally package it as a disk image with `./macos/scripts/make-dmg.sh`.
 
 `"macos/build/Desktop Games.app/Contents/MacOS/DesktopGames" --selftest <dir>` plays every tool headlessly with scripted input and writes screenshots to `<dir>`.
+
+The app is ad-hoc signed unless `CODESIGN_IDENTITY` names a Developer ID certificate. A signed and notarized release is built with:
+
+```sh
+export CODESIGN_IDENTITY="Developer ID Application: Your Name (TEAMID)"
+./macos/scripts/build-app.sh
+./macos/scripts/notarize.sh "macos/build/Desktop Games.app"
+./macos/scripts/make-dmg.sh
+./macos/scripts/notarize.sh macos/build/Desktop-Games-1.0.0.dmg
+```
+
+`notarize.sh` uses the notarytool keychain profile named by `NOTARY_PROFILE` (default `desktop-games-nostalgia`), created with `xcrun notarytool store-credentials`.
 
 ### Browser version
 
