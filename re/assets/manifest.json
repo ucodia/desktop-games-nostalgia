@@ -1,0 +1,2784 @@
+{
+ "icons": [
+  {
+   "index": 0,
+   "file": "icons/icon_0.png",
+   "center_color": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "index": 1,
+   "file": "icons/icon_1.png",
+   "center_color": [
+    46,
+    46,
+    46,
+    255
+   ]
+  },
+  {
+   "index": 2,
+   "file": "icons/icon_2.png",
+   "center_color": [
+    255,
+    0,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 3,
+   "file": "icons/icon_3.png",
+   "center_color": [
+    255,
+    0,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 4,
+   "file": "icons/icon_4.png",
+   "center_color": [
+    39,
+    0,
+    87,
+    255
+   ]
+  },
+  {
+   "index": 5,
+   "file": "icons/icon_5.png",
+   "center_color": [
+    255,
+    255,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 6,
+   "file": "icons/icon_6.png",
+   "center_color": [
+    255,
+    0,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 7,
+   "file": "icons/icon_7.png",
+   "center_color": [
+    0,
+    215,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 8,
+   "file": "icons/icon_8.png",
+   "center_color": [
+    0,
+    0,
+    255,
+    255
+   ]
+  },
+  {
+   "index": 9,
+   "file": "icons/icon_9.png",
+   "center_color": [
+    255,
+    255,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 10,
+   "file": "icons/icon_10.png",
+   "center_color": [
+    174,
+    0,
+    255,
+    255
+   ]
+  },
+  {
+   "index": 11,
+   "file": "icons/icon_11.png",
+   "center_color": [
+    0,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "index": 12,
+   "file": "icons/icon_12.png",
+   "center_color": [
+    255,
+    182,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 13,
+   "file": "icons/icon_13.png",
+   "center_color": [
+    255,
+    0,
+    138,
+    255
+   ]
+  },
+  {
+   "index": 14,
+   "file": "icons/icon_14.png",
+   "center_color": [
+    0,
+    0,
+    0,
+    255
+   ]
+  },
+  {
+   "index": 15,
+   "file": "icons/icon_15.png",
+   "center_color": [
+    0,
+    0,
+    0,
+    255
+   ]
+  }
+ ],
+ "pictures": [
+  {
+   "index": 0,
+   "name": "introduction_picture",
+   "file": "pictures/introduction_picture.png",
+   "width": 480,
+   "height": 352
+  },
+  {
+   "index": 1,
+   "name": "introduction_picture_english",
+   "file": "pictures/introduction_picture_english.png",
+   "width": 480,
+   "height": 352
+  },
+  {
+   "index": 2,
+   "name": "picture_to_storage_desktop",
+   "file": "pictures/picture_to_storage_desktop.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 3,
+   "name": "picture_to_storage_desktop_original",
+   "file": "pictures/picture_to_storage_desktop_original.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 4,
+   "name": "picture_of_tool_selection",
+   "file": "pictures/picture_of_tool_selection.png",
+   "width": 384,
+   "height": 320
+  },
+  {
+   "index": 5,
+   "name": "picture_of_tool_selection_english",
+   "file": "pictures/picture_of_tool_selection_english.png",
+   "width": 384,
+   "height": 320
+  },
+  {
+   "index": 6,
+   "name": "picture_of_hammer_hit_1",
+   "file": "pictures/picture_of_hammer_hit_1.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 7,
+   "name": "picture_of_hammer_hit_2",
+   "file": "pictures/picture_of_hammer_hit_2.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 8,
+   "name": "picture_of_hammer_hit_3",
+   "file": "pictures/picture_of_hammer_hit_3.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 9,
+   "name": "picture_of_hammer_hit_4",
+   "file": "pictures/picture_of_hammer_hit_4.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 10,
+   "name": "picture_of_hammer_hit_5",
+   "file": "pictures/picture_of_hammer_hit_5.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 11,
+   "name": "picture_of_hammer_hit_6",
+   "file": "pictures/picture_of_hammer_hit_6.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 12,
+   "name": "picture_of_hammer_hit_7",
+   "file": "pictures/picture_of_hammer_hit_7.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 13,
+   "name": "picture_of_hammer_hit_8",
+   "file": "pictures/picture_of_hammer_hit_8.png",
+   "width": 64,
+   "height": 64
+  },
+  {
+   "index": 14,
+   "name": "picture_of_hit_by_machine_gun_0",
+   "file": "pictures/picture_of_hit_by_machine_gun_0.png",
+   "width": 16,
+   "height": 16
+  },
+  {
+   "index": 15,
+   "name": "picture_of_hit_by_machine_gun_1",
+   "file": "pictures/picture_of_hit_by_machine_gun_1.png",
+   "width": 16,
+   "height": 16
+  },
+  {
+   "index": 16,
+   "name": "picture_of_hit_by_machine_gun_2",
+   "file": "pictures/picture_of_hit_by_machine_gun_2.png",
+   "width": 16,
+   "height": 16
+  },
+  {
+   "index": 17,
+   "name": "picture_of_hit_by_machine_gun_3",
+   "file": "pictures/picture_of_hit_by_machine_gun_3.png",
+   "width": 16,
+   "height": 16
+  },
+  {
+   "index": 18,
+   "name": "picture_of_flame_thrower_hit_1",
+   "file": "pictures/picture_of_flame_thrower_hit_1.png",
+   "width": 48,
+   "height": 48
+  },
+  {
+   "index": 19,
+   "name": "picture_of_flame_thrower_hit_2",
+   "file": "pictures/picture_of_flame_thrower_hit_2.png",
+   "width": 48,
+   "height": 48
+  },
+  {
+   "index": 20,
+   "name": "picture_of_flame_thrower_hit_3",
+   "file": "pictures/picture_of_flame_thrower_hit_3.png",
+   "width": 48,
+   "height": 48
+  },
+  {
+   "index": 21,
+   "name": "picture_of_flame_thrower_hit_4",
+   "file": "pictures/picture_of_flame_thrower_hit_4.png",
+   "width": 48,
+   "height": 48
+  },
+  {
+   "index": 22,
+   "name": "picture_of_hit_by_color_thrower_1",
+   "file": "pictures/picture_of_hit_by_color_thrower_1.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 23,
+   "name": "picture_of_hit_by_color_thrower_2",
+   "file": "pictures/picture_of_hit_by_color_thrower_2.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 24,
+   "name": "picture_of_hit_by_color_thrower_3",
+   "file": "pictures/picture_of_hit_by_color_thrower_3.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 25,
+   "name": "picture_of_hit_by_color_thrower_4",
+   "file": "pictures/picture_of_hit_by_color_thrower_4.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 26,
+   "name": "picture_of_hit_by_color_thrower_5",
+   "file": "pictures/picture_of_hit_by_color_thrower_5.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 27,
+   "name": "picture_of_phaser_hit_1",
+   "file": "pictures/picture_of_phaser_hit_1.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 28,
+   "name": "picture_of_phaser_hit_2",
+   "file": "pictures/picture_of_phaser_hit_2.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 29,
+   "name": "picture_of_phaser_hit_3",
+   "file": "pictures/picture_of_phaser_hit_3.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 30,
+   "name": "picture_of_phaser_hit_4",
+   "file": "pictures/picture_of_phaser_hit_4.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 31,
+   "name": "picture_of_phaser_hit_5",
+   "file": "pictures/picture_of_phaser_hit_5.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 32,
+   "name": "picture_of_phaser_hit_6",
+   "file": "pictures/picture_of_phaser_hit_6.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 33,
+   "name": "picture_of_phaser_hit_7",
+   "file": "pictures/picture_of_phaser_hit_7.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 34,
+   "name": "picture_of_phaser_hit_8",
+   "file": "pictures/picture_of_phaser_hit_8.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 35,
+   "name": "picture_of_phaser_hit_9",
+   "file": "pictures/picture_of_phaser_hit_9.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 36,
+   "name": "picture_of_phaser_hit_10",
+   "file": "pictures/picture_of_phaser_hit_10.png",
+   "width": 128,
+   "height": 128
+  },
+  {
+   "index": 37,
+   "name": "picture_of_stamp_print_1",
+   "file": "pictures/picture_of_stamp_print_1.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 38,
+   "name": "picture_of_stamp_print_2",
+   "file": "pictures/picture_of_stamp_print_2.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 39,
+   "name": "picture_of_stamp_print_3",
+   "file": "pictures/picture_of_stamp_print_3.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 40,
+   "name": "picture_of_stamp_print_3_english",
+   "file": "pictures/picture_of_stamp_print_3_english.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 41,
+   "name": "picture_of_stamp_print_4",
+   "file": "pictures/picture_of_stamp_print_4.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 42,
+   "name": "picture_of_stamp_print_4_english",
+   "file": "pictures/picture_of_stamp_print_4_english.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 43,
+   "name": "picture_of_stamp_print_5",
+   "file": "pictures/picture_of_stamp_print_5.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 44,
+   "name": "picture_of_stamp_print_6",
+   "file": "pictures/picture_of_stamp_print_6.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 45,
+   "name": "picture_of_stamp_print_7",
+   "file": "pictures/picture_of_stamp_print_7.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 46,
+   "name": "picture_of_stamp_print_8",
+   "file": "pictures/picture_of_stamp_print_8.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 47,
+   "name": "picture_of_stamp_print_9",
+   "file": "pictures/picture_of_stamp_print_9.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 48,
+   "name": "picture_of_stamp_print_10",
+   "file": "pictures/picture_of_stamp_print_10.png",
+   "width": 96,
+   "height": 96
+  },
+  {
+   "index": 49,
+   "name": "dead_termite",
+   "file": "pictures/dead_termite.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 50,
+   "name": "hit_picture",
+   "file": "pictures/hit_picture.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 51,
+   "name": "random_picture",
+   "file": "pictures/random_picture.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 52,
+   "name": "picture_of_hit",
+   "file": "pictures/picture_of_hit.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 53,
+   "name": "picture_of_hit_2",
+   "file": "pictures/picture_of_hit_2.png",
+   "width": 384,
+   "height": 320
+  },
+  {
+   "index": 54,
+   "name": "hit_picture_2",
+   "file": "pictures/hit_picture_2.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 55,
+   "name": "hit_picture_3",
+   "file": "pictures/hit_picture_3.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 56,
+   "name": "hit_picture_4",
+   "file": "pictures/hit_picture_4.png",
+   "width": 32,
+   "height": 32
+  },
+  {
+   "index": 57,
+   "name": "print_picture",
+   "file": "pictures/print_picture.png",
+   "width": 32,
+   "height": 32
+  }
+ ],
+ "sprites": [
+  {
+   "index": 0,
+   "name": "peter",
+   "file": "sprites/peter.png",
+   "width": 32,
+   "height": 32,
+   "phases": 5,
+   "directions": 4,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 8.0
+  },
+  {
+   "index": 1,
+   "name": "lucy",
+   "file": "sprites/lucy.png",
+   "width": 32,
+   "height": 32,
+   "phases": 5,
+   "directions": 4,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 900,
+   "steps": 8.0
+  },
+  {
+   "index": 2,
+   "name": "sprite_of_selection_cursor",
+   "file": "sprites/sprite_of_selection_cursor.png",
+   "width": 128,
+   "height": 96,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 3,
+   "name": "sprite_of_tool",
+   "file": "sprites/sprite_of_tool.png",
+   "width": 32,
+   "height": 32,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 4,
+   "name": "bullet",
+   "file": "sprites/bullet.png",
+   "width": 32,
+   "height": 32,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 8.0
+  },
+  {
+   "index": 5,
+   "name": "sprite_of_quiet_hammer",
+   "file": "sprites/sprite_of_quiet_hammer.png",
+   "width": 112,
+   "height": 160,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 6,
+   "name": "sprite_of_knock_hammer",
+   "file": "sprites/sprite_of_knock_hammer.png",
+   "width": 74,
+   "height": 160,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 7,
+   "name": "sprite_of_potsherd_1",
+   "file": "sprites/sprite_of_potsherd_1.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 8,
+   "name": "sprite_of_potsherd_2",
+   "file": "sprites/sprite_of_potsherd_2.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 9,
+   "name": "sprite_of_potsherd_3",
+   "file": "sprites/sprite_of_potsherd_3.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 10,
+   "name": "sprite_of_potsherd_4",
+   "file": "sprites/sprite_of_potsherd_4.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 11,
+   "name": "sprite_of_potsherd_5",
+   "file": "sprites/sprite_of_potsherd_5.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 12,
+   "name": "sprite_of_quiet_chain_saw",
+   "file": "sprites/sprite_of_quiet_chain_saw.png",
+   "width": 192,
+   "height": 192,
+   "phases": 2,
+   "directions": 1,
+   "rest_phases": 2,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.01
+  },
+  {
+   "index": 13,
+   "name": "sprite_of_sawing_chain_saw",
+   "file": "sprites/sprite_of_sawing_chain_saw.png",
+   "width": 192,
+   "height": 192,
+   "phases": 2,
+   "directions": 8,
+   "rest_phases": 2,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.5
+  },
+  {
+   "index": 14,
+   "name": "sprite_of_splinter_1",
+   "file": "sprites/sprite_of_splinter_1.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 15,
+   "name": "sprite_of_splinter_2",
+   "file": "sprites/sprite_of_splinter_2.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 16,
+   "name": "sprite_of_splinter_3",
+   "file": "sprites/sprite_of_splinter_3.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 17,
+   "name": "sprite_of_splinter_4",
+   "file": "sprites/sprite_of_splinter_4.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 18,
+   "name": "sprite_of_splinter_5",
+   "file": "sprites/sprite_of_splinter_5.png",
+   "width": 6,
+   "height": 6,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 200,
+   "steps": 0.0
+  },
+  {
+   "index": 19,
+   "name": "sprite_of_quiet_machine_gun",
+   "file": "sprites/sprite_of_quiet_machine_gun.png",
+   "width": 192,
+   "height": 192,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 20,
+   "name": "sprite_of_shooting_machine_gun",
+   "file": "sprites/sprite_of_shooting_machine_gun.png",
+   "width": 192,
+   "height": 192,
+   "phases": 2,
+   "directions": 1,
+   "rest_phases": 2,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 21,
+   "name": "sprite_of_hit_by_machine_gun",
+   "file": "sprites/sprite_of_hit_by_machine_gun.png",
+   "width": 16,
+   "height": 16,
+   "phases": 14,
+   "directions": 1,
+   "rest_phases": 14,
+   "delay_ms": 55,
+   "level": 100,
+   "steps": 0.0
+  },
+  {
+   "index": 22,
+   "name": "sprite_of_shell_from_machine_gun",
+   "file": "sprites/sprite_of_shell_from_machine_gun.png",
+   "width": 64,
+   "height": 64,
+   "phases": 8,
+   "directions": 1,
+   "rest_phases": 8,
+   "delay_ms": 55,
+   "level": 20000,
+   "steps": 0.0
+  },
+  {
+   "index": 23,
+   "name": "sprite_of_flame_thrower",
+   "file": "sprites/sprite_of_flame_thrower.png",
+   "width": 320,
+   "height": 256,
+   "phases": 2,
+   "directions": 1,
+   "rest_phases": 2,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 24,
+   "name": "sprite_of_flame",
+   "file": "sprites/sprite_of_flame.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 25,
+   "name": "sprite_of_standing_flame",
+   "file": "sprites/sprite_of_standing_flame.png",
+   "width": 51,
+   "height": 51,
+   "phases": 8,
+   "directions": 1,
+   "rest_phases": 8,
+   "delay_ms": 110,
+   "level": 200,
+   "steps": 12.0
+  },
+  {
+   "index": 26,
+   "name": "sprite_of_color_thrower",
+   "file": "sprites/sprite_of_color_thrower.png",
+   "width": 320,
+   "height": 256,
+   "phases": 4,
+   "directions": 1,
+   "rest_phases": 4,
+   "delay_ms": 165,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 27,
+   "name": "sprite_of_color_red",
+   "file": "sprites/sprite_of_color_red.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 28,
+   "name": "sprite_of_color_green",
+   "file": "sprites/sprite_of_color_green.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 29,
+   "name": "sprite_of_color_blue",
+   "file": "sprites/sprite_of_color_blue.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 30,
+   "name": "sprite_of_color_yellow",
+   "file": "sprites/sprite_of_color_yellow.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 31,
+   "name": "sprite_of_color_purple",
+   "file": "sprites/sprite_of_color_purple.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 32,
+   "name": "sprite_of_color_cyan",
+   "file": "sprites/sprite_of_color_cyan.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 33,
+   "name": "sprite_of_color_orange",
+   "file": "sprites/sprite_of_color_orange.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 34,
+   "name": "sprite_of_color_pink",
+   "file": "sprites/sprite_of_color_pink.png",
+   "width": 64,
+   "height": 64,
+   "phases": 20,
+   "directions": 1,
+   "rest_phases": 20,
+   "delay_ms": 55,
+   "level": 500,
+   "steps": 4.0
+  },
+  {
+   "index": 35,
+   "name": "sprite_of_phaser",
+   "file": "sprites/sprite_of_phaser.png",
+   "width": 384,
+   "height": 320,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 165,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 36,
+   "name": "sprite_of_shooting_phaser",
+   "file": "sprites/sprite_of_shooting_phaser.png",
+   "width": 384,
+   "height": 320,
+   "phases": 3,
+   "directions": 1,
+   "rest_phases": 3,
+   "delay_ms": 110,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 37,
+   "name": "sprite_of_stamp",
+   "file": "sprites/sprite_of_stamp.png",
+   "width": 256,
+   "height": 256,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 38,
+   "name": "sprite_of_stamp_down",
+   "file": "sprites/sprite_of_stamp_down.png",
+   "width": 256,
+   "height": 256,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 39,
+   "name": "sprite_of_termite_on_hand",
+   "file": "sprites/sprite_of_termite_on_hand.png",
+   "width": 128,
+   "height": 96,
+   "phases": 3,
+   "directions": 1,
+   "rest_phases": 3,
+   "delay_ms": 165,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 40,
+   "name": "sprite_of_termite_down",
+   "file": "sprites/sprite_of_termite_down.png",
+   "width": 96,
+   "height": 96,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 165,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 41,
+   "name": "termite",
+   "file": "sprites/termite.png",
+   "width": 32,
+   "height": 32,
+   "phases": 4,
+   "directions": 4,
+   "rest_phases": 2,
+   "delay_ms": 165,
+   "level": 100,
+   "steps": 20.0
+  },
+  {
+   "index": 42,
+   "name": "sprite_of_washing",
+   "file": "sprites/sprite_of_washing.png",
+   "width": 384,
+   "height": 320,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 165,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 43,
+   "name": "sprite_of_proceeding_washing",
+   "file": "sprites/sprite_of_proceeding_washing.png",
+   "width": 384,
+   "height": 320,
+   "phases": 3,
+   "directions": 1,
+   "rest_phases": 3,
+   "delay_ms": 110,
+   "level": 1000,
+   "steps": 0.0
+  },
+  {
+   "index": 44,
+   "name": "sprite_of_new_bullet",
+   "file": "sprites/sprite_of_new_bullet.png",
+   "width": 32,
+   "height": 32,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 8.0
+  },
+  {
+   "index": 45,
+   "name": "sprite_of_hit",
+   "file": "sprites/sprite_of_hit.png",
+   "width": 32,
+   "height": 32,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 8.0
+  },
+  {
+   "index": 46,
+   "name": "sprite_of_shell",
+   "file": "sprites/sprite_of_shell.png",
+   "width": 32,
+   "height": 32,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 8.0
+  },
+  {
+   "index": 47,
+   "name": "sprite_of_color",
+   "file": "sprites/sprite_of_color.png",
+   "width": 32,
+   "height": 32,
+   "phases": 1,
+   "directions": 1,
+   "rest_phases": 1,
+   "delay_ms": 55,
+   "level": 1000,
+   "steps": 8.0
+  }
+ ],
+ "sounds": [
+  {
+   "index": 0,
+   "name": "smash_1",
+   "file": "sounds/smash_1.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 1,
+   "name": "smash_2",
+   "file": "sounds/smash_2.wav",
+   "format": 2,
+   "rate": 24000
+  },
+  {
+   "index": 2,
+   "name": "smash_3",
+   "file": "sounds/smash_3.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 3,
+   "name": "smash_4",
+   "file": "sounds/smash_4.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 4,
+   "name": "smash_5",
+   "file": "sounds/smash_5.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 5,
+   "name": "smash_6",
+   "file": "sounds/smash_6.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 6,
+   "name": "smash_7",
+   "file": "sounds/smash_7.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 7,
+   "name": "smash_8",
+   "file": "sounds/smash_8.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 8,
+   "name": "quiet_chain_saw",
+   "file": "sounds/quiet_chain_saw.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 9,
+   "name": "sawing_chain_saw",
+   "file": "sounds/sawing_chain_saw.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 10,
+   "name": "machine_gun",
+   "file": "sounds/machine_gun.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 11,
+   "name": "machine_gun_reverberation",
+   "file": "sounds/machine_gun_reverberation.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 12,
+   "name": "drop_of_shell_1",
+   "file": "sounds/drop_of_shell_1.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 13,
+   "name": "drop_of_shell_2",
+   "file": "sounds/drop_of_shell_2.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 14,
+   "name": "drop_of_shell_3",
+   "file": "sounds/drop_of_shell_3.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 15,
+   "name": "drop_of_shell_4",
+   "file": "sounds/drop_of_shell_4.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 16,
+   "name": "drop_of_shell_5",
+   "file": "sounds/drop_of_shell_5.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 17,
+   "name": "drop_of_shell_6",
+   "file": "sounds/drop_of_shell_6.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 18,
+   "name": "drop_of_shell_7",
+   "file": "sounds/drop_of_shell_7.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 19,
+   "name": "drop_of_shell_8",
+   "file": "sounds/drop_of_shell_8.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 20,
+   "name": "drop_of_shell_9",
+   "file": "sounds/drop_of_shell_9.wav",
+   "format": 1,
+   "rate": 22050
+  },
+  {
+   "index": 21,
+   "name": "fire",
+   "file": "sounds/fire.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 22,
+   "name": "flame_begin",
+   "file": "sounds/flame_begin.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 23,
+   "name": "flame",
+   "file": "sounds/flame.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 24,
+   "name": "flame_end",
+   "file": "sounds/flame_end.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 25,
+   "name": "color_thrower_shooting",
+   "file": "sounds/color_thrower_shooting.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 26,
+   "name": "color_thrower_drop",
+   "file": "sounds/color_thrower_drop.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 27,
+   "name": "phaser",
+   "file": "sounds/phaser.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 28,
+   "name": "stamp",
+   "file": "sounds/stamp.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 29,
+   "name": "termite_sound",
+   "file": "sounds/termite_sound.wav",
+   "format": 1,
+   "rate": 22050
+  },
+  {
+   "index": 30,
+   "name": "squishy_termite",
+   "file": "sounds/squishy_termite.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 31,
+   "name": "sound_of_washing",
+   "file": "sounds/sound_of_washing.wav",
+   "format": 2,
+   "rate": 22050
+  },
+  {
+   "index": 32,
+   "name": "random_sound",
+   "file": "sounds/random_sound.wav",
+   "format": 1,
+   "rate": 22050
+  },
+  {
+   "index": 33,
+   "name": "random_sound_2",
+   "file": "sounds/random_sound_2.wav",
+   "format": 1,
+   "rate": 22050
+  }
+ ],
+ "palette": [
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   144
+  ],
+  [
+   255,
+   0,
+   0,
+   255
+  ],
+  [
+   215,
+   0,
+   0,
+   255
+  ],
+  [
+   175,
+   0,
+   0,
+   255
+  ],
+  [
+   131,
+   0,
+   0,
+   255
+  ],
+  [
+   87,
+   0,
+   0,
+   255
+  ],
+  [
+   43,
+   0,
+   0,
+   255
+  ],
+  [
+   255,
+   72,
+   72,
+   255
+  ],
+  [
+   215,
+   60,
+   60,
+   255
+  ],
+  [
+   175,
+   49,
+   49,
+   255
+  ],
+  [
+   131,
+   37,
+   37,
+   255
+  ],
+  [
+   87,
+   24,
+   24,
+   255
+  ],
+  [
+   43,
+   12,
+   12,
+   255
+  ],
+  [
+   255,
+   116,
+   116,
+   255
+  ],
+  [
+   215,
+   97,
+   97,
+   255
+  ],
+  [
+   175,
+   79,
+   79,
+   255
+  ],
+  [
+   131,
+   59,
+   59,
+   255
+  ],
+  [
+   87,
+   39,
+   39,
+   255
+  ],
+  [
+   43,
+   19,
+   19,
+   255
+  ],
+  [
+   255,
+   166,
+   158,
+   255
+  ],
+  [
+   215,
+   140,
+   133,
+   255
+  ],
+  [
+   175,
+   114,
+   108,
+   255
+  ],
+  [
+   131,
+   85,
+   81,
+   255
+  ],
+  [
+   87,
+   57,
+   54,
+   255
+  ],
+  [
+   43,
+   28,
+   27,
+   255
+  ],
+  [
+   255,
+   220,
+   210,
+   255
+  ],
+  [
+   215,
+   185,
+   177,
+   255
+  ],
+  [
+   175,
+   151,
+   144,
+   255
+  ],
+  [
+   131,
+   113,
+   108,
+   255
+  ],
+  [
+   87,
+   75,
+   72,
+   255
+  ],
+  [
+   43,
+   37,
+   36,
+   255
+  ],
+  [
+   255,
+   114,
+   0,
+   255
+  ],
+  [
+   215,
+   96,
+   0,
+   255
+  ],
+  [
+   175,
+   78,
+   0,
+   255
+  ],
+  [
+   131,
+   58,
+   0,
+   255
+  ],
+  [
+   87,
+   39,
+   0,
+   255
+  ],
+  [
+   43,
+   19,
+   0,
+   255
+  ],
+  [
+   255,
+   198,
+   150,
+   255
+  ],
+  [
+   215,
+   167,
+   126,
+   255
+  ],
+  [
+   175,
+   136,
+   103,
+   255
+  ],
+  [
+   131,
+   102,
+   77,
+   255
+  ],
+  [
+   87,
+   68,
+   51,
+   255
+  ],
+  [
+   43,
+   34,
+   25,
+   255
+  ],
+  [
+   255,
+   182,
+   0,
+   255
+  ],
+  [
+   215,
+   153,
+   0,
+   255
+  ],
+  [
+   175,
+   125,
+   0,
+   255
+  ],
+  [
+   131,
+   93,
+   0,
+   255
+  ],
+  [
+   87,
+   62,
+   0,
+   255
+  ],
+  [
+   43,
+   31,
+   0,
+   255
+  ],
+  [
+   255,
+   192,
+   96,
+   255
+  ],
+  [
+   215,
+   162,
+   81,
+   255
+  ],
+  [
+   175,
+   132,
+   66,
+   255
+  ],
+  [
+   131,
+   99,
+   49,
+   255
+  ],
+  [
+   87,
+   66,
+   33,
+   255
+  ],
+  [
+   43,
+   33,
+   16,
+   255
+  ],
+  [
+   255,
+   255,
+   0,
+   255
+  ],
+  [
+   215,
+   215,
+   0,
+   255
+  ],
+  [
+   175,
+   175,
+   0,
+   255
+  ],
+  [
+   131,
+   131,
+   0,
+   255
+  ],
+  [
+   87,
+   87,
+   0,
+   255
+  ],
+  [
+   43,
+   43,
+   0,
+   255
+  ],
+  [
+   255,
+   255,
+   128,
+   255
+  ],
+  [
+   215,
+   215,
+   108,
+   255
+  ],
+  [
+   175,
+   175,
+   88,
+   255
+  ],
+  [
+   131,
+   131,
+   66,
+   255
+  ],
+  [
+   87,
+   87,
+   44,
+   255
+  ],
+  [
+   43,
+   43,
+   22,
+   255
+  ],
+  [
+   255,
+   255,
+   192,
+   255
+  ],
+  [
+   215,
+   215,
+   162,
+   255
+  ],
+  [
+   175,
+   175,
+   132,
+   255
+  ],
+  [
+   131,
+   131,
+   99,
+   255
+  ],
+  [
+   87,
+   87,
+   66,
+   255
+  ],
+  [
+   43,
+   43,
+   33,
+   255
+  ],
+  [
+   178,
+   255,
+   0,
+   255
+  ],
+  [
+   150,
+   215,
+   0,
+   255
+  ],
+  [
+   122,
+   175,
+   0,
+   255
+  ],
+  [
+   91,
+   131,
+   0,
+   255
+  ],
+  [
+   61,
+   87,
+   0,
+   255
+  ],
+  [
+   30,
+   43,
+   0,
+   255
+  ],
+  [
+   0,
+   255,
+   0,
+   255
+  ],
+  [
+   0,
+   215,
+   0,
+   255
+  ],
+  [
+   0,
+   175,
+   0,
+   255
+  ],
+  [
+   0,
+   131,
+   0,
+   255
+  ],
+  [
+   0,
+   87,
+   0,
+   255
+  ],
+  [
+   0,
+   43,
+   0,
+   255
+  ],
+  [
+   128,
+   255,
+   128,
+   255
+  ],
+  [
+   108,
+   215,
+   108,
+   255
+  ],
+  [
+   88,
+   175,
+   88,
+   255
+  ],
+  [
+   66,
+   131,
+   66,
+   255
+  ],
+  [
+   44,
+   87,
+   44,
+   255
+  ],
+  [
+   22,
+   43,
+   22,
+   255
+  ],
+  [
+   192,
+   255,
+   192,
+   255
+  ],
+  [
+   162,
+   215,
+   162,
+   255
+  ],
+  [
+   132,
+   175,
+   132,
+   255
+  ],
+  [
+   99,
+   131,
+   99,
+   255
+  ],
+  [
+   66,
+   87,
+   66,
+   255
+  ],
+  [
+   33,
+   43,
+   33,
+   255
+  ],
+  [
+   0,
+   255,
+   146,
+   255
+  ],
+  [
+   0,
+   215,
+   123,
+   255
+  ],
+  [
+   0,
+   175,
+   100,
+   255
+  ],
+  [
+   0,
+   131,
+   75,
+   255
+  ],
+  [
+   0,
+   87,
+   50,
+   255
+  ],
+  [
+   0,
+   43,
+   25,
+   255
+  ],
+  [
+   138,
+   255,
+   222,
+   255
+  ],
+  [
+   116,
+   215,
+   187,
+   255
+  ],
+  [
+   94,
+   175,
+   152,
+   255
+  ],
+  [
+   71,
+   131,
+   114,
+   255
+  ],
+  [
+   47,
+   87,
+   76,
+   255
+  ],
+  [
+   23,
+   43,
+   38,
+   255
+  ],
+  [
+   0,
+   255,
+   255,
+   255
+  ],
+  [
+   0,
+   215,
+   215,
+   255
+  ],
+  [
+   0,
+   175,
+   175,
+   255
+  ],
+  [
+   0,
+   131,
+   131,
+   255
+  ],
+  [
+   0,
+   87,
+   87,
+   255
+  ],
+  [
+   0,
+   43,
+   43,
+   255
+  ],
+  [
+   0,
+   186,
+   255,
+   255
+  ],
+  [
+   0,
+   156,
+   215,
+   255
+  ],
+  [
+   0,
+   127,
+   175,
+   255
+  ],
+  [
+   0,
+   95,
+   131,
+   255
+  ],
+  [
+   0,
+   63,
+   87,
+   255
+  ],
+  [
+   0,
+   31,
+   43,
+   255
+  ],
+  [
+   124,
+   222,
+   255,
+   255
+  ],
+  [
+   104,
+   187,
+   215,
+   255
+  ],
+  [
+   85,
+   152,
+   175,
+   255
+  ],
+  [
+   63,
+   114,
+   131,
+   255
+  ],
+  [
+   42,
+   76,
+   87,
+   255
+  ],
+  [
+   21,
+   38,
+   43,
+   255
+  ],
+  [
+   0,
+   128,
+   255,
+   255
+  ],
+  [
+   0,
+   108,
+   215,
+   255
+  ],
+  [
+   0,
+   88,
+   175,
+   255
+  ],
+  [
+   0,
+   66,
+   131,
+   255
+  ],
+  [
+   0,
+   44,
+   87,
+   255
+  ],
+  [
+   0,
+   22,
+   43,
+   255
+  ],
+  [
+   0,
+   0,
+   255,
+   255
+  ],
+  [
+   0,
+   0,
+   215,
+   255
+  ],
+  [
+   0,
+   0,
+   175,
+   255
+  ],
+  [
+   0,
+   0,
+   131,
+   255
+  ],
+  [
+   0,
+   0,
+   87,
+   255
+  ],
+  [
+   0,
+   0,
+   43,
+   255
+  ],
+  [
+   72,
+   80,
+   255,
+   255
+  ],
+  [
+   60,
+   67,
+   215,
+   255
+  ],
+  [
+   49,
+   55,
+   175,
+   255
+  ],
+  [
+   37,
+   41,
+   131,
+   255
+  ],
+  [
+   24,
+   27,
+   87,
+   255
+  ],
+  [
+   12,
+   13,
+   43,
+   255
+  ],
+  [
+   128,
+   144,
+   255,
+   255
+  ],
+  [
+   108,
+   121,
+   215,
+   255
+  ],
+  [
+   88,
+   99,
+   175,
+   255
+  ],
+  [
+   66,
+   74,
+   131,
+   255
+  ],
+  [
+   44,
+   49,
+   87,
+   255
+  ],
+  [
+   22,
+   24,
+   43,
+   255
+  ],
+  [
+   154,
+   192,
+   255,
+   255
+  ],
+  [
+   129,
+   162,
+   215,
+   255
+  ],
+  [
+   105,
+   132,
+   175,
+   255
+  ],
+  [
+   79,
+   99,
+   131,
+   255
+  ],
+  [
+   52,
+   66,
+   87,
+   255
+  ],
+  [
+   26,
+   33,
+   43,
+   255
+  ],
+  [
+   210,
+   238,
+   255,
+   255
+  ],
+  [
+   177,
+   200,
+   215,
+   255
+  ],
+  [
+   144,
+   163,
+   175,
+   255
+  ],
+  [
+   108,
+   122,
+   131,
+   255
+  ],
+  [
+   72,
+   81,
+   87,
+   255
+  ],
+  [
+   36,
+   40,
+   43,
+   255
+  ],
+  [
+   114,
+   0,
+   255,
+   255
+  ],
+  [
+   96,
+   0,
+   215,
+   255
+  ],
+  [
+   78,
+   0,
+   175,
+   255
+  ],
+  [
+   58,
+   0,
+   131,
+   255
+  ],
+  [
+   39,
+   0,
+   87,
+   255
+  ],
+  [
+   19,
+   0,
+   43,
+   255
+  ],
+  [
+   174,
+   0,
+   255,
+   255
+  ],
+  [
+   146,
+   0,
+   215,
+   255
+  ],
+  [
+   119,
+   0,
+   175,
+   255
+  ],
+  [
+   89,
+   0,
+   131,
+   255
+  ],
+  [
+   59,
+   0,
+   87,
+   255
+  ],
+  [
+   29,
+   0,
+   43,
+   255
+  ],
+  [
+   198,
+   162,
+   255,
+   255
+  ],
+  [
+   167,
+   136,
+   215,
+   255
+  ],
+  [
+   136,
+   111,
+   175,
+   255
+  ],
+  [
+   102,
+   83,
+   131,
+   255
+  ],
+  [
+   68,
+   55,
+   87,
+   255
+  ],
+  [
+   34,
+   27,
+   43,
+   255
+  ],
+  [
+   255,
+   0,
+   255,
+   255
+  ],
+  [
+   215,
+   0,
+   215,
+   255
+  ],
+  [
+   175,
+   0,
+   175,
+   255
+  ],
+  [
+   131,
+   0,
+   131,
+   255
+  ],
+  [
+   87,
+   0,
+   87,
+   255
+  ],
+  [
+   43,
+   0,
+   43,
+   255
+  ],
+  [
+   255,
+   128,
+   255,
+   255
+  ],
+  [
+   215,
+   108,
+   215,
+   255
+  ],
+  [
+   175,
+   88,
+   175,
+   255
+  ],
+  [
+   131,
+   66,
+   131,
+   255
+  ],
+  [
+   87,
+   44,
+   87,
+   255
+  ],
+  [
+   43,
+   22,
+   43,
+   255
+  ],
+  [
+   255,
+   0,
+   138,
+   255
+  ],
+  [
+   215,
+   0,
+   116,
+   255
+  ],
+  [
+   175,
+   0,
+   94,
+   255
+  ],
+  [
+   131,
+   0,
+   71,
+   255
+  ],
+  [
+   87,
+   0,
+   47,
+   255
+  ],
+  [
+   43,
+   0,
+   23,
+   255
+  ],
+  [
+   255,
+   128,
+   192,
+   255
+  ],
+  [
+   215,
+   108,
+   162,
+   255
+  ],
+  [
+   175,
+   88,
+   132,
+   255
+  ],
+  [
+   131,
+   66,
+   99,
+   255
+  ],
+  [
+   87,
+   44,
+   66,
+   255
+  ],
+  [
+   43,
+   22,
+   33,
+   255
+  ],
+  [
+   255,
+   186,
+   210,
+   255
+  ],
+  [
+   215,
+   156,
+   177,
+   255
+  ],
+  [
+   175,
+   127,
+   144,
+   255
+  ],
+  [
+   131,
+   95,
+   108,
+   255
+  ],
+  [
+   87,
+   63,
+   72,
+   255
+  ],
+  [
+   43,
+   31,
+   36,
+   255
+  ],
+  [
+   255,
+   255,
+   255,
+   255
+  ],
+  [
+   231,
+   231,
+   231,
+   255
+  ],
+  [
+   208,
+   208,
+   208,
+   255
+  ],
+  [
+   185,
+   185,
+   185,
+   255
+  ],
+  [
+   162,
+   162,
+   162,
+   255
+  ],
+  [
+   139,
+   139,
+   139,
+   255
+  ],
+  [
+   115,
+   115,
+   115,
+   255
+  ],
+  [
+   92,
+   92,
+   92,
+   255
+  ],
+  [
+   69,
+   69,
+   69,
+   255
+  ],
+  [
+   46,
+   46,
+   46,
+   255
+  ],
+  [
+   23,
+   23,
+   23,
+   255
+  ],
+  [
+   0,
+   0,
+   0,
+   255
+  ]
+ ]
+}

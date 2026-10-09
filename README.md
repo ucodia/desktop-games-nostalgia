@@ -65,37 +65,53 @@ Because the app is only ad-hoc signed, macOS ties the permission to that exact b
 The port was produced with **Claude Opus 5.5** (Anthropic's model, in Claude Code) using the **[REA](https://rea.tools/)** reverse-engineering tools, with Ghidra as the analysis backend.
 
 - **The game is a Peter program.** `stress_relief.exe` is Gemtree's generic Peter interpreter with the actual game stored in a `.petprg` section: a program tree plus its pictures, sprites, sounds and texts in 23 languages.
-- **The program tree was decompiled** into readable pseudocode that keeps the original English names and comments: see [`re/program.txt`](re/program.txt) (`tools/decompile.py`).
+- **The program tree was decompiled** into readable pseudocode that keeps the original English names and comments: see [`re/program.txt`](re/program.txt) (`re/decompile.py`).
 - **The interpreter was decompiled with REA** to recover what the program tree alone does not say: the image compression codec, the asset record layouts, the 55 ms timer tick, how sprites glide, animate and turn, how sounds loop and restart, and the coordinate system (1 unit = 32 pixels, y pointing up).
-- **The assets are extracted** from the original executable at build time (`tools/extract.py`): images decoded to PNG, Microsoft ADPCM sounds to WAV.
-- **The game logic was ported line by line to Swift** ([`Sources/DesktopGames/DesktopGames.swift`](Sources/DesktopGames/DesktopGames.swift)), running on a small reimplementation of the Peter runtime: sprites, drawing canvas, software sound mixer and input.
+- **The assets were extracted** from the original executable into [`re/assets`](re/assets) (`re/extract.py`): images decoded to PNG, Microsoft ADPCM sounds to WAV.
+- **The game logic was ported line by line to Swift** ([`macos/Sources/DesktopGames/DesktopGames.swift`](macos/Sources/DesktopGames/DesktopGames.swift)), running on a small reimplementation of the Peter runtime: sprites, drawing canvas, software sound mixer and input.
 
 Differences from the original: the game runs in true color instead of Peter's 256-color palette (the color-thrower's flood fill still treats colors as equal when they map to the same palette entry), and sprite shadows are drawn as a translucent black overlay.
 
 ## Building from source
 
+The assets extracted from the original game are included in `re/assets`, so building does not need the original executable.
+
+### macOS app
+
 Requirements: macOS 14 or later, Xcode with Swift 6, and [uv](https://docs.astral.sh/uv/).
 
-1. Download the original game from [My Abandonware](https://www.myabandonware.com/game/stress-reducers-e8l) and put `stress_relief.exe` in the repository root. The port was made from the file with SHA-256 `bdb0ab60e058dc1a70fc6a0f38996609d656ca8c605172077d8d19a4ef6ef337`.
-2. Build the app, which extracts the assets and icon from the executable:
+1. Build the app:
 
    ```sh
-   ./scripts/build-app.sh            # or: ./scripts/build-app.sh /path/to/stress_relief.exe
+   ./macos/scripts/build-app.sh
    ```
 
-   The result is `build/Desktop Games.app`.
-3. Optionally package it as a disk image with `./scripts/make-dmg.sh`.
+   The result is `macos/build/Desktop Games.app`.
+2. Optionally package it as a disk image with `./macos/scripts/make-dmg.sh`.
 
-`"build/Desktop Games.app/Contents/MacOS/DesktopGames" --selftest <dir>` plays every tool headlessly with scripted input and writes screenshots to `<dir>`.
+`"macos/build/Desktop Games.app/Contents/MacOS/DesktopGames" --selftest <dir>` plays every tool headlessly with scripted input and writes screenshots to `<dir>`.
+
+### Extracting the assets again
+
+Requirements: [uv](https://docs.astral.sh/uv/).
+
+1. Download the original game from [My Abandonware](https://www.myabandonware.com/game/stress-reducers-e8l) and put `stress_relief.exe` in `re/`. The port was made from the file with SHA-256 `bdb0ab60e058dc1a70fc6a0f38996609d656ca8c605172077d8d19a4ef6ef337`.
+2. Extract the assets and decompile the program:
+
+   ```sh
+   cd re
+   uv run extract.py stress_relief.exe assets
+   uv run decompile.py stress_relief.exe > program.txt
+   ```
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
-| `Sources/DesktopGames/` | The Swift app: the ported game and the Peter runtime pieces it needs |
-| `tools/` | Python tools that read the Peter program, decompile it and extract the assets |
+| `re/` | Reverse engineering: Python tools that read the Peter program, decompile it and extract the assets |
 | `re/program.txt` | The decompiled game program |
-| `scripts/` | Build and packaging scripts |
+| `re/assets/` | The extracted pictures, sprites, sounds and icons, shared by the builds |
+| `macos/` | The macOS app: the Swift port of the game and the Peter runtime pieces it needs, plus build and packaging scripts |
 
 ## Copyright
 
