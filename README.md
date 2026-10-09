@@ -1,6 +1,6 @@
-# Desktop Games for macOS
+# Desktop Games Nostalgia
 
-A native macOS port of **Desktop Games**, also known as **Stress Reducers**: the freeware desktop-smashing toy from 2000 by **Ing. Miroslav Němeček** (Gemtree Software), made with Gemtree's visual programming tool *Peter*.
+A faithful port of **Desktop Games**, also known as **Stress Reducers**, to macOS and the browser. It is the freeware desktop-smashing toy from 2000 by **Ing. Miroslav Němeček** (Gemtree Software), made with Gemtree's visual programming tool *Peter*.
 
 All credit belongs to the original author. This is an unofficial, non-commercial nostalgia project, not affiliated with Gemtree.
 
@@ -24,9 +24,18 @@ Desktop Games takes a picture of your screen and lets you wreck it with nine too
 
 Left mouse button uses the tool, right mouse button opens the tool menu, and Esc quits.
 
-Nothing on your real desktop is touched: everything happens on a full-screen picture of it.
+It comes in two versions:
 
-## Installing
+- **macOS app**: plays on a picture of your actual screen.
+- **Browser**: plays on a Windows XP desktop, since a web page cannot take a picture of your screen.
+
+Either way, nothing real is touched: everything happens on a full-screen picture.
+
+## Play in your browser
+
+Open **[ucodia.github.io/desktop-games-nostalgia](https://ucodia.github.io/desktop-games-nostalgia)** and double-click **stress.exe** on the desktop. You need a desktop browser with a mouse and keyboard.
+
+## Install on macOS
 
 Download `Desktop-Games-1.0.0.dmg` from the [Releases](../../releases) page, open it and drag **Desktop Games** to **Applications**. Requires macOS 14 Sonoma or later (Apple silicon or Intel).
 
@@ -69,6 +78,7 @@ The port was produced with **Claude Opus 5.5** (Anthropic's model, in Claude Cod
 - **The interpreter was decompiled with REA** to recover what the program tree alone does not say: the image compression codec, the asset record layouts, the 55 ms timer tick, how sprites glide, animate and turn, how sounds loop and restart, and the coordinate system (1 unit = 32 pixels, y pointing up).
 - **The assets were extracted** from the original executable into [`re/assets`](re/assets) (`re/extract.py`): images decoded to PNG, Microsoft ADPCM sounds to WAV.
 - **The game logic was ported line by line to Swift** ([`macos/Sources/DesktopGames/DesktopGames.swift`](macos/Sources/DesktopGames/DesktopGames.swift)), running on a small reimplementation of the Peter runtime: sprites, drawing canvas, software sound mixer and input.
+- **The Swift port was then translated to JavaScript** for the browser ([`web/src/game.js`](web/src/game.js)), with the same runtime pieces built on Canvas 2D and Web Audio. The Windows XP look comes from [XP.css](https://botoxparty.github.io/XP.css/).
 
 Differences from the original: the game runs in true color instead of Peter's 256-color palette (the color-thrower's flood fill still treats colors as equal when they map to the same palette entry), and sprite shadows are drawn as a translucent black overlay.
 
@@ -91,6 +101,18 @@ Requirements: macOS 14 or later, Xcode with Swift 6, and [uv](https://docs.astra
 
 `"macos/build/Desktop Games.app/Contents/MacOS/DesktopGames" --selftest <dir>` plays every tool headlessly with scripted input and writes screenshots to `<dir>`.
 
+### Browser version
+
+Requirements: Node.js 20 or later.
+
+```sh
+cd web
+npm install
+npm run dev       # or: npm run build, which writes the site to web/dist
+```
+
+Every push to `main` that changes the site deploys it to GitHub Pages.
+
 ### Extracting the assets again
 
 Requirements: [uv](https://docs.astral.sh/uv/).
@@ -112,7 +134,10 @@ Requirements: [uv](https://docs.astral.sh/uv/).
 | `re/program.txt` | The decompiled game program |
 | `re/assets/` | The extracted pictures, sprites, sounds and icons, shared by the builds |
 | `macos/` | The macOS app: the Swift port of the game and the Peter runtime pieces it needs, plus build and packaging scripts |
+| `web/` | The browser version: the JavaScript port and the Windows XP desktop |
 
 ## Copyright
 
 Desktop Games / Stress Reducers, including its design, artwork and sounds, is © Ing. Miroslav Němeček, Gemtree Software. This repository is shared for preservation and nostalgia and comes with no license. If you hold the rights and want it changed or taken down, please open an issue.
+
+The browser version's Windows XP desktop uses the Bliss wallpaper (photo by Charles O'Rear), the Windows logo and the Notepad icon, all © Microsoft and used here for nostalgia only. XP.css is © Adam Hammad, MIT license.

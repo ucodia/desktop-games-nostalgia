@@ -1,0 +1,124 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #245edb;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+canvas {
+  display: block;
+}
+
+.desktop,
+.overlay {
+  position: fixed;
+  inset: 0;
+}
+
+.overlay {
+  z-index: 100000;
+  image-rendering: pixelated;
+}
+
+.app-window {
+  position: fixed;
+}
+
+.app-window .title-bar {
+  cursor: default;
+}
+
+.app-window .title-bar-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 420px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.app-window .window-body {
+  margin: 0 3px 3px;
+}
+
+.game-window .window-body {
+  margin-bottom: 0;
+}
+
+.game-window .window-body canvas {
+  image-rendering: pixelated;
+}
+
+.notepad {
+  display: flex;
+  flex-direction: column;
+}
+
+.notepad-menu {
+  display: flex;
+  padding: 1px 0 2px;
+}
+
+.notepad-menu span {
+  padding: 1px 6px;
+}
+
+.notepad-page {
+  flex: 1;
+  overflow: auto;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #7f9db9;
+  font: 13px/1.45 "Lucida Console", Monaco, monospace;
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.notepad-page h1 {
+  font-size: 20px;
+}
+
+.notepad-page h2 {
+  font-size: 16px;
+  margin-top: 22px;
+}
+
+.notepad-page h3 {
+  font-size: 14px;
+}
+
+.notepad-page code,
+.notepad-page pre,
+.notepad-page pre * {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.notepad-page pre {
+  margin: 0 0 12px;
+  padding: 6px 8px;
+  color: inherit;
+  background: #f4f4f4;
+  overflow-x: auto;
+}
+
+.notepad-page table {
+  border-collapse: collapse;
+}
+
+.notepad-page th,
+.notepad-page td {
+  padding: 2px 8px;
+  border: 1px solid #c0c0c0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.notepad-page td:first-child {
+  white-space: nowrap;
+}
