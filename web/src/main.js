@@ -7,20 +7,27 @@ import { Assets } from "./peter/assets";
 import { AudioMixer } from "./peter/audio";
 import { ExitProgram, Runtime } from "./peter/runtime";
 
+const REPO_URL = "https://github.com/ucodia/desktop-games-nostalgia";
+const DMG_URL = `${REPO_URL}/releases/download/v1.0.0/Desktop-Games-1.0.0.dmg`;
+
 const audioContext = new AudioContext();
 const assets = await Assets.load(".", audioContext);
 const mixer = new AudioMixer(audioContext);
 
 const optional = (p) => p.catch(() => undefined);
-const [wallpaper, startLogo, notepadIcon] = await Promise.all([
+const [wallpaper, startLogo, notepadIcon, macIcon, githubIcon] = await Promise.all([
   optional(loadImage(new URL("./images/bliss.jpg", import.meta.url).href)),
   optional(loadImage(new URL("./images/start-logo.png", import.meta.url).href)),
   loadImage(new URL("./images/notepad.png", import.meta.url).href),
+  loadImage(new URL("./images/happy-mac.png", import.meta.url).href),
+  loadImage(new URL("./images/github.png", import.meta.url).href),
 ]);
 
 const stress = { label: "stress.exe", image: assets.appIcon, x: 12, y: 12 };
 const readme = { label: "README.md", image: notepadIcon, x: 12, y: 87, smooth: true };
-const desktop = new Desktop([stress, readme], wallpaper, startLogo);
+const macDownload = { label: "macOS Download", image: macIcon, x: 12, y: 162 };
+const github = { label: "GitHub", image: githubIcon, x: 12, y: 237, smooth: true };
+const desktop = new Desktop([stress, readme, macDownload, github], wallpaper, startLogo);
 document.body.append(desktop.canvas);
 desktop.resize();
 addEventListener("resize", () => desktop.resize());
@@ -39,6 +46,8 @@ desktop.canvas.addEventListener("dblclick", (e) => {
   const icon = desktop.iconAt(e.clientX, e.clientY);
   if (icon === stress) launch();
   else if (icon === readme) openReadme();
+  else if (icon === macDownload) location.assign(DMG_URL);
+  else if (icon === github) window.open(REPO_URL, "_blank", "noopener");
 });
 
 function launch() {

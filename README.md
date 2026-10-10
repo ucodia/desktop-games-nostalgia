@@ -37,7 +37,7 @@ Open **[ucodia.github.io/desktop-games-nostalgia](https://ucodia.github.io/deskt
 
 ## Install on macOS
 
-Download `Desktop-Games-1.0.0.dmg` from the [Releases](../../releases) page, open it and drag **Desktop Games** to **Applications**. Requires macOS 14 Sonoma or later (Apple silicon or Intel).
+Download **[Desktop-Games-1.0.0.dmg](../../releases/download/v1.0.0/Desktop-Games-1.0.0.dmg)**, open it and drag **Desktop Games** to **Applications**. Requires macOS 14 Sonoma or later (Apple silicon or Intel).
 
 ### Screen Recording permission
 
@@ -141,4 +141,4 @@ Requirements: [uv](https://docs.astral.sh/uv/).
 
 Desktop Games / Stress Reducers, including its design, artwork and sounds, is © Ing. Miroslav Němeček, Gemtree Software. This repository is shared for preservation and nostalgia and comes with no license. If you hold the rights and want it changed or taken down, please open an issue.
 
-The browser version's Windows XP desktop uses the Bliss wallpaper (photo by Charles O'Rear), the Windows logo and the Notepad icon, all © Microsoft and used here for nostalgia only. XP.css is © Adam Hammad, MIT license.
+The browser version's Windows XP desktop uses the Bliss wallpaper (photo by Charles O'Rear), the Windows logo and the Notepad icon (© Microsoft), a redrawn Happy Mac (© Apple) and the GitHub mark (© GitHub), all used here for nostalgia only. XP.css is © Adam Hammad, MIT license.
